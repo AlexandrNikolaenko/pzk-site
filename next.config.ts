@@ -5,6 +5,7 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   assetPrefix: '/pzk-site/',
   basePath: '/pzk-site',
+  images: {unoptimized: true},
 };
 
 export default nextConfig;
