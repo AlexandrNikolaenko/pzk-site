@@ -1,12 +1,12 @@
 import type { NextConfig } from "next";
 
-const isProd = process.env.NODE_ENV === 'production';
+const isDev = process.env.NODE_ENV === 'development';
 
 const nextConfig: NextConfig = {
   output: "export",
   reactStrictMode: true,
-  assetPrefix: isProd ? '/pzk-site/' : undefined,
-  basePath: isProd ? '/pzk-site' : undefined,
+  assetPrefix: isDev ? '/pzk-site/' : undefined,
+  basePath: isDev ? '/pzk-site' : undefined,
 };
 
 export default nextConfig;
