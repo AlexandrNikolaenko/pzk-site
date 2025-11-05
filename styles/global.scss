@@ -1,0 +1,42 @@
+@import "./root.scss";
+
+body {
+  background: var(--color-background);
+  font-family: var(--font-inter-sans);
+}
+
+section {
+  min-height: 100vh;
+}
+
+footer {
+  padding-top: 60px;
+  padding-bottom: 71px;
+
+  span {
+    font-size: 20px;
+    line-height: 115%;
+    letter-spacing: -.02em;
+    color: white;
+  }
+
+  a {
+    font-size: 16px;
+    line-height: 115%;
+    letter-spacing: -.02em;
+    color: #DADADA;
+  }
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1232px;
+  width: 100%;
+}
+
+@media screen and (max-width: 1440px) {
+  .wrapper {
+    margin: 0 104px;
+    width: 100%;
+  }
+}
