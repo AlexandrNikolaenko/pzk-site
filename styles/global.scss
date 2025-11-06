@@ -9,6 +9,18 @@ section {
   min-height: 100vh;
 }
 
+section:first-child {
+  min-height: 1000px;
+  background: url('/main-fon.jpg') center bottom no-repeat;
+  background-size: cover;
+
+  @media screen and (max-width: 550px) {
+    min-height: 100vh;
+    background-position: bottom;
+    background-size: cover;
+  }
+}
+
 footer {
   padding-top: 60px;
   padding-bottom: 71px;
@@ -32,11 +44,21 @@ footer {
   margin: 0 auto;
   max-width: 1232px;
   width: 100%;
-}
 
-@media screen and (max-width: 1440px) {
-  .wrapper {
-    margin: 0 104px;
-    width: 100%;
+  @media screen and (max-width: 1440px) {
+    margin: 0;
+    max-width: none;
+    padding-right: 104px;
+    padding-left: 104px;
+  }
+
+  @media screen and (max-width: 1350px) {
+    padding-right: 46px;
+    padding-left: 46px;
+  }
+  
+  @media screen and (max-width: 550px) {
+    padding-right: 30px;
+    padding-left: 30px;
   }
 }
