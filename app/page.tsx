@@ -1,4 +1,6 @@
 import AccentButton from "@/components/button/accent-button";
+import Gallery from "@/components/main/gallery-image";
+import ScrollArrow from "@/components/main/scroll-arrow";
 import ServiceCard from "@/components/main/service-card";
 import Image from "next/image";
 
@@ -31,6 +33,14 @@ export default function Home() {
         <ServiceCard title="Коммерческие объекты" body="Рестораны, кафе и кофейни, отели и бутик-гостиницы, загородные клубы, глэмпинги, базы отдыха и коттеджные посёлки"/>
         <ServiceCard title="Частные дома" body="Классические загородные коттеджи, современные дома, таунхаусы, дачи и небольшие загородные дома"/>
         <ServiceCard title="Экстерьер" body="Веранды, беседки, бани, деревья, фасады, входные зоны и прочее"/>
+      </div>
+    </section>
+    <section id="gallery" className="relative">
+      <div id="gallery-lent" className=" max-w-[100vw] overflow-x-scroll">
+        <Gallery />
+        
+        <ScrollArrow dir={-1} />
+        <ScrollArrow dir={1} />
       </div>
     </section>
    </main>
