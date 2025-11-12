@@ -3,6 +3,7 @@ import Gallery from "@/components/main/gallery-image";
 import ScrollArrow from "@/components/main/scroll-arrow";
 import ServiceCard from "@/components/main/service-card";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -35,12 +36,66 @@ export default function Home() {
         <ServiceCard title="Экстерьер" body="Веранды, беседки, бани, деревья, фасады, входные зоны и прочее"/>
       </div>
     </section>
-    <section id="gallery" className="relative">
+    <section id="gallery" className="relative pb-0 max-xl:pb-[113px]">
       <div id="gallery-lent" className=" max-w-[100vw] overflow-x-scroll">
         <Gallery />
         
         <ScrollArrow dir={-1} />
         <ScrollArrow dir={1} />
+      </div>
+    </section>
+    <section id="goal" className="wrapper flex justify-center py-[53px]">
+      <h2 className="text-[#DADADA] text-[24px] text-center leading-[115.1%] tracking-[-.02em] max-lg:max-w-[459px]">
+        Наша цель —  подарить своим клиентам незабываемую атмосферу праздника.
+      </h2>
+    </section>
+    <section id="advantages" className="relative w-full">
+      <div className="wrapper max-[1100px]:relative flex max-md:flex-col gap-[60px]">
+        <div className="relative min-w-[544px] max-w-[544px] max-xl:w-full max-xl:min-w-0 max-xl:max-w-none h-[620px] max-xl:h-auto max-md:aspect-380/430">
+          <Image src={'/advantages-fon.jpg'} alt="fon" fill objectFit="cover"/>  
+        </div>
+        <div className="pt-[89px] max-xl:pt-0 grid grid-cols-2 w-full max-xl:grid-cols-1 gap-[70px] max-[1440px]:gap-9">
+          <div className="flex flex-col max-md:items-center gap-[18px] h-fit">
+            <span className="flex items-center gap-5 text-[#545454] text-[28px] leading-[115.1%] tracking-[-.02em]">
+              <Image src={'/quality-icon.svg'} width={36} height={36} alt="quality"/>
+              Качество
+            </span>
+            <p className="text-[#DADADA] text-xl leading-[115.1%] tracking-[-.02em] max-xl:text-base max-md:text-center">
+              Все используемое светодиодное оборудование влагозащищено <br/>
+и имеет соответствующие <Link href={'/#'} className="underline">сертификаты</Link>.
+            </p>
+          </div>
+          <div className="flex flex-col max-md:items-center gap-[18px] h-fit">
+            <span className="flex items-center gap-5 text-[#545454] text-[28px] leading-[115.1%] tracking-[-.02em]">
+              <Image src={'/timeout-icon.svg'} width={36} height={36} alt="timeout"/>
+              Сроки
+            </span>
+            <p className="text-[#DADADA] text-xl leading-[115.1%] tracking-[-.02em] max-xl:text-base max-md:text-center">
+              Выезд на монтаж возможен <br/>
+на следующий день после подписания договора. В среднем один дом украшается за 1 день.
+            </p>
+          </div>
+          <div className="flex flex-col max-md:items-center gap-[18px] h-fit">
+            <span className="flex items-center gap-5 text-[#545454] text-[28px] leading-[115.1%] tracking-[-.02em]">
+              <Image src={'/price-icon.svg'} width={43} height={43} alt="price"/>
+              Цена
+            </span>
+            <p className="text-[#DADADA] text-xl leading-[115.1%] tracking-[-.02em] max-xl:text-base max-md:text-center">
+              Мы никогда не гонимся <br/>
+за низкой ценой в ущерб качеству и безопасности. Если мы можем сделать более экономичным решение без потери качества - всегда говорим об этом нашим клиентам.
+            </p>
+          </div>
+          <div className="flex flex-col max-md:items-center gap-[18px] h-fit">
+            <span className="flex items-center gap-5 text-[#545454] text-[28px] leading-[115.1%] tracking-[-.02em]">
+              <Image src={'/prof-icon.svg'} width={41} height={41} alt="proffecional"/>
+              Профессионализм
+            </span>
+            <p className="text-[#DADADA] text-xl leading-[115.1%] tracking-[-.02em] max-xl:text-base max-md:text-center">
+              У вас будут работать квалифицированные электромонтажники с опытом электрофикации загородных домов без холодных скруток<br/> 
+и других некачественных соединений.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
    </main>
