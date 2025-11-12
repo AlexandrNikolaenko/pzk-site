@@ -1,4 +1,4 @@
-@import "./root.scss";
+@use "root.scss";
 
 body {
   background: var(--color-background);
