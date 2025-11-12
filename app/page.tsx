@@ -6,6 +6,8 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
+  const strokeStyle = " leading-[115.1%] tracking-[-.02em] ";
+
   return (
    <main>
     <section className="h-screen w-full relative z-0">
@@ -172,6 +174,51 @@ export default function Home() {
           </div>
         </div>
       </div>
+    </section>
+    <section className="wrapper pt-[190px] pb-[129px] flex flex-col gap-[52px]">
+      <div className="flex justify-between itmes-start">
+        <div className="flex flex-col gap-4">
+          <h3 className="text-white font-medium text-[36px] max-lg:text-[32px] max-md:text-[24px] leading-[115.1%] tracking-[-.02em]">
+            Разные бюджеты — один стандарт качества
+          </h3>
+          <p className="text-[#DADADA] text-[20px] max-md:text-base leading-[115.1%] tracking-[-.02em]">
+            Мы подбираем оборудование и решения под проект, <br/>
+сохраняя эстетику, безопасность и долговечность. <br/>
+Делаем подсветку, которая безупречна при любом бюджете.
+          </p>
+        </div>
+        <Image className="max-lg:hidden" src={'/quality-mark-icon.svg'} alt="quality" width={73} height={73}/>
+      </div>
+      <div className="flex flex-col max-md:flex-row gap-[52px] max-lg:gap-[30px]">
+        <ul className="flex gap-4 max-lg:gap-2.5 max-md:gap-6 max-md:flex-col w-full ">
+          <div className="aspect-4/3 w-full relative">
+            <Image src={'/quality-image-1.jpg'} fill alt="image"/>
+          </div>
+          <div className="aspect-4/3 w-full relative">
+            <Image src={'/quality-image-2.jpg'} fill alt="image"/>
+          </div>
+          <div className="aspect-4/3 w-full relative">
+            <Image src={'/quality-image-3.jpg'} fill alt="image"/>
+          </div>
+        </ul>
+        <div className="flex gap-[46px] max-lg:gap-[34px] items-center max-md:py-20 max-md:flex-col">
+          <span className="text-nowrap text-[32px] max-lg:text-[18px] text-[#DADADA] leading-[115.1%] tracking-[-.02em]">100.000 руб</span>
+          <div className="relative w-full bg-[#BFBFBF] h-px max-md:h-full max-md:w-px">
+            <svg className="absolute top-0 max-md:bottom-0 max-md:top-auto right-0 translate-y-[-50%] max-md:rotate-90 max-md:translate-x-[50%] max-md:translate-y-0" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.5 0.5L15.5 8.75806L0.5 16.5" stroke="#BFBFBF" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <span className="text-nowrap text-[32px] max-lg:text-[18px] text-[#DADADA] leading-[115.1%] tracking-[-.02em]">1.100.000 руб</span>
+        </div>
+      </div>
+    </section>
+    <section className="wrapper rounded-2xl bg-[#D9D9D9] pt-14 pb-9 px-[119px] flex flex-col items-center gap-24">
+      <div className="flex flex-col gap-3">
+        <h4 className={"text-center font-bold text-[32px] text-background" + strokeStyle}>Этапы работы</h4>
+        <p className="text-center max-w-[777px] text-background text-xl">Наша цель не только разработать индивидуальный дизайн-проект и произвести качественный монтаж иллюминации, но и подарить своим клиентам незабываемую атмосферу праздника.</p>
+      </div>
+      <ul>
+      </ul>
     </section>
    </main>
   );
