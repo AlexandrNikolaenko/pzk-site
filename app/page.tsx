@@ -98,6 +98,81 @@ export default function Home() {
         </div>
       </div>
     </section>
+    <section id="achivements" className="wrapper flex flex-col items-center gap-[97px] max-md:md:gap-[60px] pt-[140px]">
+      <div className="flex flex-col gap-2 items-center">
+        <span className="text-white text-[48px] max-md:text-[32px] leading-[115.1%] tracking-[-.02em] ">С 2016 года </span>
+        <p className="text-[#DADADA] text-[24px] max-md:text-base leading-[115.1%] tracking-[-.02em] ">Мы создаем новогоднее настроение семьям и их гостям!</p>
+      </div>
+      <div className="flex flex-col gap-8 max-md:gap-10 w-full max-md:max-w-md max-md:border-2 border-l-white">
+        <div className="flex relative">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" className="absolute md:hidden top-[54px] max-md:top-0 -left-2.5 z-0" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="10" cy="10" r="10" fill="#E3B54B"/>
+          </svg>
+
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" className="absolute top-[54px] max-md:hidden -right-2.5 z-0" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="10" cy="10" r="10" fill="#E3B54B"/>
+          </svg>
+
+          <div className="absolute top-[63px] w-full h-0.5 bg-white z-0 max-md:hidden">
+          </div>
+
+          <div className="flex flex-col gap-6 max-md:gap-3 max-w-[436px] max-md:max-w-[447px] px-[15px] max-md:pl-[50px] bg-background max-md:bg-transparent relative z-20">
+            <h5 className="text-white font-medium text-[36px] max-md:text-[24px] leading-[115.1%] tracking-[-.02em]">
+              &gt; 12 лет 
+на строительном рынке
+            </h5>
+            <p className="text-[#DADADA] text-xl max-md:text-base leading-[115.1%] tracking-[-.02em] max-w-[367px]">
+              Мы накопили большой опыт 
+и поэтому можем предлагать Вам проекты под ключ
+            </p>
+          </div>
+        </div>
+        <div className="flex relative justify-center max-md:justify-start">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" className="absolute top-[54px] max-md:top-0 -left-2.5 z-0" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="10" cy="10" r="10" fill="#E3B54B"/>
+          </svg>
+
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" className="absolute top-[54px] max-md:hidden -right-2.5 z-0" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="10" cy="10" r="10" fill="#E3B54B"/>
+          </svg>
+
+          <div className="absolute top-[63px] w-full h-0.5 bg-white z-0 max-md:hidden">
+          </div>
+
+          <div className="flex flex-col gap-6 max-md:gap-3 max-w-[320px] max-md:max-w-[447px] px-[15px] max-md:pl-[50px] bg-background max-md:bg-transparent relative z-20">
+            <h5 className="text-white font-medium text-[36px] max-md:text-[24px] leading-[115.1%] tracking-[-.02em] ">
+              &gt; 834 объектов
+украшено нами
+            </h5>
+            <p className="text-[#DADADA] text-xl max-md:text-base leading-[115.1%] tracking-[-.02em] max-w-[367px]">
+              Ценим клиентов и всегда оправдываем их доверие
+            </p>
+          </div>
+        </div>
+        <div className="flex relative justify-end max-md:justify-start">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" className="absolute top-[54px] max-md:top-0 -left-2.5 z-0" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="10" cy="10" r="10" fill="#E3B54B"/>
+          </svg>
+
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" className="absolute hidden top-[54px] -right-2.5 z-0" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="10" cy="10" r="10" fill="#E3B54B"/>
+          </svg>
+
+          <div className="absolute top-[63px] w-full h-0.5 bg-white z-0 max-md:hidden">
+          </div>
+
+          <div className="flex flex-col gap-6 max-md:gap-3 max-w-[436px] max-md:max-w-[447px] px-[15px] max-md:pl-[50px] bg-background max-md:bg-transparent relative z-20">
+            <h5 className="text-white font-medium text-[36px] max-md:text-[24px] leading-[115.1%] tracking-[-.02em]">
+              &gt; 8 лет занимаемся
+            </h5>
+            <p className="text-[#DADADA] text-xl max-md:text-base leading-[115.1%] tracking-[-.02em] max-w-[367px]">
+              Светодиодными украшениями загородных домов, участков
+и деревьев
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
    </main>
   );
 }
