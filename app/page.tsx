@@ -270,15 +270,15 @@ export default async function Home() {
     <section id="portfolio" className="wrapper flex flex-col gap-[90px] max-lg:gap-[101px max-md:gap-[113px] items-center">
       <p className="text-center text-white text-xl max-lg:text-base leading-[140%] tracking-[-.02em] max-w-[927px] max-lg:max-w-[583px] max-md:max-w-none">Мы оформили уже огромное количество домов и&nbsp;знаем, как сделать красиво именно у&nbsp;Вас! Каждый наш проект —&nbsp;это уют, свет и&nbsp;немного волшебства, которое хочется повторять!</p>
       <div className="flex flex-col w-full gap-4 max-lg:md:gap-2.5">
-        <div className="grid grid-cols-[816fr_400fr] max-sm:grid-cols-1 gap-4 max-lg:md:gap-2.5 aspect-1232/504">
+        <div className="grid grid-cols-[816fr_400fr] max-sm:grid-cols-1 gap-4 max-lg:md:gap-2.5 aspect-1232/504 max-sm:aspect-auto">
           <CaseImage id={1} aspect="816/504"/>
           <CaseImage id={2} aspect="400/504"/>
         </div>
-        <div className="grid grid-cols-[623fr_593fr] max-sm:grid-cols-1 gap-4 max-lg:md:gap-2.5 aspect-1232/452">
+        <div className="grid grid-cols-[623fr_593fr] max-sm:grid-cols-1 gap-4 max-lg:md:gap-2.5 aspect-1232/452 max-sm:aspect-auto">
           <CaseImage id={3} aspect="623/452"/>
           <CaseImage id={4} aspect="593/452"/>
         </div>
-        <div className="grid grid-cols-[600fr_616fr] max-sm:grid-cols-1 gap-4 max-lg:md:gap-2.5 aspect-1232/560">
+        <div className="grid grid-cols-[600fr_616fr] max-sm:grid-cols-1 gap-4 max-lg:md:gap-2.5 aspect-1232/560 max-sm:aspect-auto">
           <CaseImage id={5} aspect="600/560"/>
           <CaseImage id={6} aspect="616/560"/>
         </div>
