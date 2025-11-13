@@ -1,3 +1,5 @@
+'use server'
+
 import AccentButton from "@/components/button/accent-button";
 import Gallery from "@/components/main/gallery-image";
 import ScrollArrow from "@/components/main/scroll-arrow";
@@ -6,7 +8,7 @@ import StepPoint from "@/components/main/step";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Home() {
+export default async function Home() {
   const strokeStyle = " leading-[115.1%] tracking-[-.02em] ";
 
   return (
@@ -251,6 +253,13 @@ export default function Home() {
           *работаем быстро и четко, поэтому не заставим Вас долго ждать
         </p>
       </div>
+    </section>
+    <section id="garanty" className="wrapper py-[106px] flex flex-col items-center gap-8 max-lg:md:gap-10">
+      <div className="flex flex-col gap-8 max-ld:gap-4">
+        <h3 className={"text-white text-[38px] text-center max-lg:text-[32px] max-md:text-2xl font-medium" + strokeStyle}>Безусловная гарантия 12 месяцев — на работы и материалы</h3>
+        <p className={"text-[#DADADA] text-2xl max-lg:text-xl max-md:text-base max-w-[779px] max-ld:max-w-[643px] max-md:max-w-[301px] w-full text-center" + strokeStyle}>Монтаж, электрика и комплектующие — под нашей защитой. Все условия зафиксированы в договоре: сроки реакции, замена при браке и полная ответственность за результат.</p>
+      </div>
+      <AccentButton >Перейти к оформлению</AccentButton>
     </section>
    </main>
   );
