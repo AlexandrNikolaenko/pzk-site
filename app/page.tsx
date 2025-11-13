@@ -242,15 +242,15 @@ export default async function Home() {
             </div>
           </div>
           <div className="flex max-md:flex-col max-md:gap-8 justify-between max-md:justify-center items-center flex-nowrap w-full">
-            <StepPoint id={1} body="Вы оставляете заявку или звоните нам"/>
+            <StepPoint id={4} body="Вы оставляете заявку или звоните нам"/>
             <div className="relative w-[99px] max-lg:w-[59px] max-md:w-[66px] h-[47px] max-lg:h-7 max-md:h-[31px] max-md:rotate-90">
               <Image src={'/step-arrow-icon.svg'} alt="next" fill/> 
             </div>
-            <StepPoint id={2} body="С вами связывается наш менеджер"/>
+            <StepPoint id={5} body="С вами связывается наш менеджер"/>
             <div className="relative w-[99px] max-lg:w-[59px] max-md:w-[66px] h-[47px] max-lg:h-7 max-md:h-[31px] max-md:rotate-90">
               <Image src={'/step-arrow-icon.svg'} alt="next" fill/> 
             </div>
-            <StepPoint id={3} body="Выезжаем на замер с образцами гирлянд"/>
+            <StepPoint id={6} body="Выезжаем на замер с образцами гирлянд"/>
           </div>
         </ul>
         <p className={"text-center font-extralight italic text-xl max-lg:text-xs max-md:text-base" + strokeStyle}>
