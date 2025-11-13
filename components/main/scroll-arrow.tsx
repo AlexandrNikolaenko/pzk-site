@@ -18,7 +18,7 @@ export default function ScrollArrow({dir}: {dir: 1 | -1}) {
 
 
   return (
-    <button onClick={handleScrollGallery} className={`${dir == -1 ? 'rotate-180 left-[104px] max-[1350px]:left-[46px]' : 'right-[104px] max-[1350px]:right-[46px]'} top-[203px] max-xl:top-[520px] absolute w-[53px] aspect-square flex items-center justify-center rounded-full border border-white bg-background`}>
+    <button onClick={handleScrollGallery} className={`${dir == -1 ? 'rotate-180 left-[104px] max-[1350px]:left-[46px] max-[550px]:left-[30px]' : 'right-[104px] max-[1350px]:right-[46px] max-[550px]:right-[30px]'} top-[203px] max-xl:top-[520px] absolute w-[53px] aspect-square flex items-center justify-center rounded-full border border-white bg-background`}>
       <Image src={'/arrow-scroll-icon.svg'} alt="arrow" width={26} height={11}/>
     </button>
   )

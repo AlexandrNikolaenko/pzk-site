@@ -2,6 +2,7 @@ import AccentButton from "@/components/button/accent-button";
 import Gallery from "@/components/main/gallery-image";
 import ScrollArrow from "@/components/main/scroll-arrow";
 import ServiceCard from "@/components/main/service-card";
+import StepPoint from "@/components/main/step";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -18,7 +19,7 @@ export default function Home() {
             Профессиональная праздничная и контурная подсветка загородных домов <br/>
 — без хлопот и суеты
           </p>
-          <AccentButton >Заказать</AccentButton>
+          <AccentButton >Получить расчет</AccentButton>
         </div>
       </div>
       <div className="absolute h-[234px] w-full bottom-0 bg-linear-to-b from-transparent to-background">
@@ -205,20 +206,51 @@ export default function Home() {
           <span className="text-nowrap text-[32px] max-lg:text-[18px] text-[#DADADA] leading-[115.1%] tracking-[-.02em]">100.000 руб</span>
           <div className="relative w-full bg-[#BFBFBF] h-px max-md:h-full max-md:w-px">
             <svg className="absolute top-0 max-md:bottom-0 max-md:top-auto right-0 translate-y-[-50%] max-md:rotate-90 max-md:translate-x-[50%] max-md:translate-y-0" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M0.5 0.5L15.5 8.75806L0.5 16.5" stroke="#BFBFBF" stroke-linecap="round"/>
+              <path d="M0.5 0.5L15.5 8.75806L0.5 16.5" stroke="#BFBFBF" strokeLinecap="round"/>
             </svg>
           </div>
           <span className="text-nowrap text-[32px] max-lg:text-[18px] text-[#DADADA] leading-[115.1%] tracking-[-.02em]">1.100.000 руб</span>
         </div>
       </div>
     </section>
-    <section className="wrapper rounded-2xl bg-[#D9D9D9] pt-14 pb-9 px-[119px] flex flex-col items-center gap-24">
-      <div className="flex flex-col gap-3">
-        <h4 className={"text-center font-bold text-[32px] text-background" + strokeStyle}>Этапы работы</h4>
-        <p className="text-center max-w-[777px] text-background text-xl">Наша цель не только разработать индивидуальный дизайн-проект и произвести качественный монтаж иллюминации, но и подарить своим клиентам незабываемую атмосферу праздника.</p>
+    <section className="wrapper">
+      <div className="relative rounded-2xl bg-[#D9D9D9] pt-14 max-lg:pt-34px max-md:pt-[126px] pb-9 max-lg:pb-5 max-md:pb-9 px-[119px] max-lg:px-[70px] max-md:px-[30px] flex flex-col items-center gap-24 max-lg:gap-14">
+        <Image className="absolute top-[-30px]" src={'/step-point-icon.svg'} alt="point" width={60} height={60}/>
+        <div className="flex flex-col gap-3 max-lg:md:gap-1.5">
+          <h4 className={"text-center font-bold text-[32px] max-lg:md:text-xl text-background" + strokeStyle}>Этапы работы</h4>
+          <p className="text-center max-w-[777px] text-background text-xl max-lg:text-sm max-md:text-base">Наша цель не только разработать индивидуальный дизайн-проект и произвести качественный монтаж иллюминации, но и подарить своим клиентам незабываемую атмосферу праздника.</p>
+        </div>
+        <ul className="flex flex-col gap-[98px] max-lg:gap-[57px] max-md:gap-8 w-full">
+          <div className="flex max-md:flex-col max-md:gap-8 justify-between max-md:justify-center items-center flex-nowrap w-full">
+            <StepPoint id={1} body="Вы оставляете заявку или звоните нам"/>
+            <div className="relative w-[99px] max-lg:w-[59px] max-mg:w-[66px] h-[47px] max-lg:h-7 max-md:h-[31px] max-md:rotate-90">
+              <Image src={'/step-arrow-icon.svg'} alt="next" fill/> 
+            </div>
+            <StepPoint id={2} body="С вами связывается наш менеджер"/>
+            <div className="relative w-[99px] max-lg:w-[59px] max-mg:w-[66px] h-[47px] max-lg:h-7 max-md:h-[31px] max-md:rotate-90">
+              <Image src={'/step-arrow-icon.svg'} alt="next" fill/> 
+            </div>
+            <StepPoint id={3} body="Выезжаем на замер с образцами гирлянд"/>
+            <div className="relative md:hidden w-[99px] max-lg:w-[59px] max-mg:w-[66px] h-[47px] max-lg:h-7 max-md:h-[31px] max-md:rotate-90">
+              <Image src={'/step-arrow-icon.svg'} alt="next" fill/> 
+            </div>
+          </div>
+          <div className="flex max-md:flex-col max-md:gap-8 justify-between max-md:justify-center items-center flex-nowrap w-full">
+            <StepPoint id={1} body="Вы оставляете заявку или звоните нам"/>
+            <div className="relative w-[99px] max-lg:w-[59px] max-mg:w-[66px] h-[47px] max-lg:h-7 max-md:h-[31px] max-md:rotate-90">
+              <Image src={'/step-arrow-icon.svg'} alt="next" fill/> 
+            </div>
+            <StepPoint id={2} body="С вами связывается наш менеджер"/>
+            <div className="relative w-[99px] max-lg:w-[59px] max-mg:w-[66px] h-[47px] max-lg:h-7 max-md:h-[31px] max-md:rotate-90">
+              <Image src={'/step-arrow-icon.svg'} alt="next" fill/> 
+            </div>
+            <StepPoint id={3} body="Выезжаем на замер с образцами гирлянд"/>
+          </div>
+        </ul>
+        <p className={"text-center font-extralight italic text-xl max-lg:text-sm max-md:text-base" + strokeStyle}>
+          *работаем быстро и четко, поэтому не заставим Вас долго ждать
+        </p>
       </div>
-      <ul>
-      </ul>
     </section>
    </main>
   );
