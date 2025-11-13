@@ -42,9 +42,9 @@ export default async function Home() {
         <Image src={'/lamp-icon.svg'} alt="light" width={41} height={41}/>
       </div>
       <div className="flex flex-nowrap max-md:flex-col gap-4 max-md:gap-5 items-center">
-        <ServiceCard title="Коммерческие объекты" body="Рестораны, кафе и кофейни, отели и бутик-гостиницы, загородные клубы, глэмпинги, базы отдыха и коттеджные посёлки"/>
-        <ServiceCard title="Частные дома" body="Классические загородные коттеджи, современные дома, таунхаусы, дачи и небольшие загородные дома"/>
-        <ServiceCard title="Экстерьер" body="Веранды, беседки, бани, деревья, фасады, входные зоны и прочее"/>
+        <ServiceCard title="Коммерческие объекты" body="Рестораны, кафе и&nbsp;кофейни, отели и&nbsp;бутик-гостиницы, загородные клубы, глэмпинги, базы отдыха и&nbsp;коттеджные посёлки"/>
+        <ServiceCard title="Частные дома" body="Классические загородные коттеджи, современные дома, таунхаусы, дачи и&nbsp;небольшие загородные дома"/>
+        <ServiceCard title="Экстерьер" body="Веранды, беседки, бани, деревья, фасады, входные зоны и&nbsp;прочее"/>
       </div>
     </section>
     <section id="gallery" className="relative pb-0 max-xl:pb-[113px]">
@@ -185,11 +185,11 @@ export default async function Home() {
       <div className="flex justify-between itmes-start">
         <div className="flex flex-col gap-4">
           <h3 className="text-white font-medium text-[36px] max-lg:text-[32px] max-md:text-[24px] leading-[115.1%] tracking-[-.02em]">
-            Разные бюджеты — один стандарт качества
+            Разные бюджеты —&nbsp;один стандарт качества
           </h3>
           <p className="text-[#DADADA] text-[20px] max-md:text-base leading-[115.1%] tracking-[-.02em]">
-            Мы подбираем оборудование и&nbsp;решения под&nbsp;проект, <br/>
-сохраняя эстетику, безопасность и долговечность. <br/>
+            Мы подбираем оборудование и&nbsp;решения под&nbsp;проект,
+сохраняя эстетику, безопасность и&nbsp;долговечность.
 Делаем подсветку, которая безупречна при&nbsp;любом бюджете.
           </p>
         </div>
@@ -241,15 +241,15 @@ export default async function Home() {
             </div>
           </div>
           <div className="flex max-md:flex-col max-md:gap-8 justify-between max-md:justify-center items-center flex-nowrap w-full">
-            <StepPoint id={4} body="Вы оставляете заявку или звоните нам"/>
+            <StepPoint id={4} body="Отправляем Вам коммерческое предложение"/>
             <div className="relative w-[99px] max-lg:w-[59px] max-md:w-[66px] h-[47px] max-lg:h-7 max-md:h-[31px] max-md:rotate-90">
               <Image src={'/step-arrow-icon.svg'} alt="next" fill/> 
             </div>
-            <StepPoint id={5} body="С вами связывается наш менеджер"/>
+            <StepPoint id={5} body="Подписываем договор"/>
             <div className="relative w-[99px] max-lg:w-[59px] max-md:w-[66px] h-[47px] max-lg:h-7 max-md:h-[31px] max-md:rotate-90">
               <Image src={'/step-arrow-icon.svg'} alt="next" fill/> 
             </div>
-            <StepPoint id={6} body="Выезжаем на замер с образцами гирлянд"/>
+            <StepPoint id={6} body="Проводим монтаж*"/>
           </div>
         </ul>
         <p className={"text-center font-extralight italic text-xl max-lg:text-xs max-md:text-base" + strokeStyle}>
@@ -263,7 +263,7 @@ export default async function Home() {
         <p className={"text-[#DADADA] text-2xl max-lg:text-xl max-md:text-base max-w-[779px] max-md:max-w-[643px] max-sm:max-w-[301px] w-full text-center" + strokeStyle}>Монтаж, электрика и&nbsp;комплектующие — под&nbsp;нашей защитой. Все условия зафиксированы в&nbsp;договоре: сроки реакции, замена при&nbsp;браке и&nbsp;полная ответственность за&nbsp;результат.</p>
       </div>
       <Link href={'/#form'}>
-        <AccentButton >Перейти к&nbsp;оформлению</AccentButton>
+        <AccentButton >Перейти к оформлению</AccentButton>
       </Link>
     </section>
     <section id="portfolio" className="wrapper flex flex-col gap-[90px] max-lg:gap-[101px max-md:gap-[113px] items-center">
@@ -287,7 +287,7 @@ export default async function Home() {
       <div className="flex flex-col gap-3">
         <h3 className={"text-white font-medium text-[32px] max-lg:text-2xl max-md:text-xl" + strokeStyle}>Что говорят о&nbsp;нас те, чей дом мы уже наполнили праздником:</h3>
         <p className={"text-[#DADADA] text-2xl max-lg:text-base" + strokeStyle}>
-          Каждый дом для нас —&nbsp;особенный, и&nbsp;мы искренне радуемся, <br/>
+          Каждый дом для нас —&nbsp;особенный, и&nbsp;мы искренне радуемся,
 когда результат вызывает улыбку.
         </p>
       </div>
