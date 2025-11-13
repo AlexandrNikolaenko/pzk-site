@@ -11,7 +11,7 @@ export default function Footer() {
           </div>
           <div className="flex flex-col gap-3 max-md:gap-1.5">
             <span>Ищите нас по&nbsp;адресу</span>
-            <Link href={'/#'}>Санкт-Петербург, Выборгское шоссе, д. 234</Link>
+            <Link href={'https://yandex.ru/maps/-/CLC2VI~0'}>Санкт-Петербург, Выборгское шоссе, д. 234</Link>
           </div>
         </div>
         <div className="flex flex-col gap-3 max-md:gap-1.5">

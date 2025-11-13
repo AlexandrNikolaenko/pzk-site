@@ -20,10 +20,10 @@ export default async function Home() {
    <main>
     <section className="h-screen w-full relative z-0">
       <div className="wrapper pt-[217px] max-[1100px]:pt-[178px] max-[550px]:pt-[155px]">
-        <div className="flex flex-col gap-5">
-          <h1 className={"max-w-[977px] text-[44px] max-[1100px]:text-[36px] max-[550px]:text-[28px] text-white font-extralight" + strokeStyle}>Профессиональная праздничная и контурная подсветка загородных домов —&nbsp;без хлопот и суеты</h1>
+        <div className="flex flex-col gap-5 max-[550px]:max-w-[346px]">
+          <h1 className={"max-w-[977px] text-[44px] max-[1100px]:text-[36px] max-[550px]:text-[28px] max-[420px]:w-full max-[420px]:text-[26px] max-[550px]:w-[370px] text-white font-extralight" + strokeStyle}>Профессиональная праздничная и&nbsp;контурная подсветка загородных домов —&nbsp;без&nbsp;хлопот и&nbsp;суеты</h1>
           <p className={"max-w-[550px] text-2xl max-[550px]:text-base text-[#DADADA] font-extralight" + strokeStyle}>
-            Мы превращаем дома в сияющие пространства, где живёт праздник от&nbsp;100 тысяч рублей
+            Мы превращаем дома в&nbsp;сияющие пространства, где живёт праздник от&nbsp;100&nbsp;тысяч&nbsp;рублей
           </p>
           <Link href={'/#form'}>
             <AccentButton >Получить расчет</AccentButton>
@@ -36,10 +36,10 @@ export default async function Home() {
     <section id="service" className="wrapper flex flex-col gap-[61px] pt-[81px] pb-28 max-[1100px]:pb-[76px] max-md:pb-[34px]">
       <div className="flex justify-between items-start">
         <div className="flex flex-col gap-5 w-full max-w-[868px]">
-          <h2 className="text-[36px] text-white font-light leading-[115.1%] tracking-[-.02em]">Подсветим все!</h2>
-          <p className="text-2xl text-[#DADADA] font-normal leading-[115.1%] tracking-[-.02em]">Мы создаём освещение для&nbsp;домов, террас, деревьев, беседок и&nbsp;фасадов — любой сложности и&nbsp;архитектуры.</p>
+          <h2 className="text-[36px] max-lg:text-[32px] max-md:text-[28px]  text-white font-light leading-[115.1%] tracking-[-.02em]">Подсветим все!</h2>
+          <p className="text-2xl max-lg:text-xl max-md:text-base text-[#DADADA] font-normal leading-[115.1%] tracking-[-.02em]">Мы создаём освещение для&nbsp;домов, террас, деревьев, беседок и&nbsp;фасадов — любой сложности и&nbsp;архитектуры.</p>
         </div>
-        <Image src={'/lamp-icon.svg'} alt="light" width={41} height={41}/>
+        <Image className="max-lg:hidden" src={'/lamp-icon.svg'} alt="light" width={41} height={41}/>
       </div>
       <div className="flex flex-nowrap max-md:flex-col gap-4 max-md:gap-5 items-center">
         <ServiceCard title="Коммерческие объекты" body="Рестораны, кафе и&nbsp;кофейни, отели и&nbsp;бутик-гостиницы, загородные клубы, глэмпинги, базы отдыха и&nbsp;коттеджные посёлки"/>
@@ -61,6 +61,7 @@ export default async function Home() {
       <div className="mx-auto max-w-[1232px] w-full max-[1440px]:m-0 max-[1440px]:max-w-none max-[1440px]:pl-0 max-[1440px]:pr-[90px] max-xl:px-[46px] max-[550px]:px-[30px] max-[1100px]:relative flex xl:items-center max-md:flex-col gap-[60px]">
         <div className="relative min-w-[544px] max-w-[544px] w-full max-xl:min-w-0 max-xl:max-w-none h-[620px] max-xl:h-auto max-md:aspect-380/430">
           <Image src={'/advantages-fon.jpg'} alt="fon" fill objectFit="cover"/>  
+          <Image className="hover:opacity-0 active:opacity-0 focus:opacity-0" src={'/advantages-fon-dark.jpg'} alt="fon" fill objectFit="cover"/>  
         </div>
         <div className=" max-xl:pt-0 grid grid-cols-2 w-full max-xl:grid-cols-1 gap-[70px] max-xl:gap-9">
           <div className="flex flex-col max-md:items-center gap-[18px] h-fit">
@@ -197,14 +198,14 @@ export default async function Home() {
       </div>
       <div className="flex flex-col max-md:flex-row gap-[52px] max-lg:gap-[30px]">
         <ul className="flex gap-4 max-lg:gap-2.5 max-md:gap-6 max-md:flex-col w-full ">
-          <div className="aspect-4/3 w-full relative">
-            <Image src={'/quality-image-1.jpg'} fill alt="image"/>
+          <div className="aspect-4/3 w-full relative overflow-hidden">
+            <Image className="hover:scale-[110%] focus:scale-[110%] active:scale-[110%]" src={'/quality-image-1.jpg'} fill alt="image"/>
           </div>
-          <div className="aspect-4/3 w-full relative">
-            <Image src={'/quality-image-2.jpg'} fill alt="image"/>
+          <div className="aspect-4/3 w-full relative overflow-hidden">
+            <Image className="hover:scale-[110%] focus:scale-[110%] active:scale-[110%]" src={'/quality-image-2.jpg'} fill alt="image"/>
           </div>
-          <div className="aspect-4/3 w-full relative">
-            <Image src={'/quality-image-3.jpg'} fill alt="image"/>
+          <div className="aspect-4/3 w-full relative overflow-hidden">
+            <Image className="hover:scale-[110%] focus:scale-[110%] active:scale-[110%]" src={'/quality-image-3.jpg'} fill alt="image"/>
           </div>
         </ul>
         <div className="flex gap-[46px] max-lg:gap-[34px] items-center max-md:py-20 max-md:flex-col">
@@ -219,7 +220,7 @@ export default async function Home() {
       </div>
     </section>
     <section className="wrapper">
-      <div className="relative rounded-2xl bg-[#D9D9D9] pt-14 max-lg:pt-34px max-md:pt-[126px] pb-9 max-lg:pb-5 max-md:pb-9 px-[119px] max-lg:px-[70px] max-md:px-[30px] flex flex-col items-center gap-24 max-lg:gap-14">
+      <div className="relative rounded-2xl bg-[#D9D9D9] pt-14 max-lg:pt-34px max-md:pt-20 pb-9 max-lg:pb-5 max-md:pb-9 px-[119px] max-lg:px-[70px] max-md:px-[30px] flex flex-col items-center gap-24 max-lg:gap-14">
         <Image className="absolute top-[-30px]" src={'/step-point-icon.svg'} alt="point" width={60} height={60}/>
         <div className="flex flex-col gap-3 max-lg:md:gap-1.5">
           <h4 className={"text-center font-bold text-[32px] max-lg:md:text-xl text-background" + strokeStyle}>Этапы работы</h4>
@@ -259,7 +260,7 @@ export default async function Home() {
     </section>
     <section id="garanty" className="wrapper py-[106px] max-lg:pt-[97px] max-lg:pb-32 max-md:pt-[90px] max-md:pb-[113px] flex flex-col items-center gap-8 max-lg:md:gap-10">
       <div className="flex flex-col gap-8 max-ld:gap-4 items-center">
-        <h3 className={"text-white text-[38px] text-center max-lg:text-[32px] max-md:text-2xl font-medium" + strokeStyle}>Безусловная гарантия 12 месяцев — на&nbsp;работы и&nbsp;материалы</h3>
+        <h3 className={"text-white text-[38px] text-center max-lg:text-[32px] max-md:text-2xl font-medium" + strokeStyle}>Безусловная гарантия 12&nbsp;месяцев на&nbsp;работы&nbsp;и&nbsp;материалы</h3>
         <p className={"text-[#DADADA] text-2xl max-lg:text-xl max-md:text-base max-w-[779px] max-md:max-w-[643px] max-sm:max-w-[301px] w-full text-center" + strokeStyle}>Монтаж, электрика и&nbsp;комплектующие — под&nbsp;нашей защитой. Все&nbsp;условия зафиксированы в&nbsp;договоре: сроки реакции, замена при&nbsp;браке и&nbsp;полная ответственность за&nbsp;результат.</p>
       </div>
       <Link href={'/#form'}>

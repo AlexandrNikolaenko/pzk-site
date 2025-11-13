@@ -3,6 +3,10 @@
 body {
   background: var(--color-background);
   font-family: var(--font-inter-sans);
+
+  * {
+    transition: all .3s;
+  }
 }
 
 button {
