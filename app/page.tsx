@@ -21,10 +21,9 @@ export default async function Home() {
     <section className="h-screen w-full relative z-0">
       <div className="wrapper pt-[217px] max-[1100px]:pt-[178px] max-[550px]:pt-[155px]">
         <div className="flex flex-col gap-5">
-          <h1 className="max-w-[977px] text-[44px] max-[1100px]:text-[36px] max-[550px]:text-[28px] text-white font-light leading-[115.1%] tracking-[-.02em]">Мы превращаем дома в сияющие пространства, где живёт праздник</h1>
-          <p className="max-w-[550px] text-2xl max-[550px]:text-base text-[#DADADA] font-light leading-[115.1%] tracking-[-.02em]">
-            Профессиональная праздничная и контурная подсветка загородных домов <br/>
-— без хлопот и суеты
+          <h1 className={"max-w-[977px] text-[44px] max-[1100px]:text-[36px] max-[550px]:text-[28px] text-white font-extralight" + strokeStyle}>Профессиональная праздничная и контурная подсветка загородных домов —&nbsp;без хлопот и суеты</h1>
+          <p className={"max-w-[550px] text-2xl max-[550px]:text-base text-[#DADADA] font-extralight" + strokeStyle}>
+            Мы превращаем дома в сияющие пространства, где живёт праздник от&nbsp;100 тысяч рублей
           </p>
           <Link href={'/#form'}>
             <AccentButton >Получить расчет</AccentButton>
@@ -38,7 +37,7 @@ export default async function Home() {
       <div className="flex justify-between items-start">
         <div className="flex flex-col gap-5 w-full max-w-[868px]">
           <h2 className="text-[36px] text-white font-light leading-[115.1%] tracking-[-.02em]">Подсветим все!</h2>
-          <p className="text-2xl text-[#DADADA] font-normal leading-[115.1%] tracking-[-.02em]">Мы создаём освещение для домов, террас, деревьев, беседок и фасадов — любой сложности и архитектуры.</p>
+          <p className="text-2xl text-[#DADADA] font-normal leading-[115.1%] tracking-[-.02em]">Мы создаём освещение для&nbsp;домов, террас, деревьев, беседок и&nbsp;фасадов — любой сложности и&nbsp;архитектуры.</p>
         </div>
         <Image src={'/lamp-icon.svg'} alt="light" width={41} height={41}/>
       </div>
@@ -55,7 +54,7 @@ export default async function Home() {
     </section>
     <section id="goal" className="wrapper flex justify-center py-[53px]">
       <h2 className="text-[#DADADA] text-[24px] text-center leading-[115.1%] tracking-[-.02em] max-lg:max-w-[459px]">
-        Наша цель —  подарить своим клиентам незабываемую атмосферу праздника.
+        Наша цель —&nbsp;подарить своим клиентам незабываемую атмосферу праздника.
       </h2>
     </section>
     <section id="advantages" className="relative w-full">
@@ -71,7 +70,7 @@ export default async function Home() {
             </span>
             <p className="text-[#DADADA] text-xl leading-[115.1%] tracking-[-.02em] max-xl:text-base max-md:text-center">
               Все используемое светодиодное оборудование влагозащищено <br/>
-и имеет соответствующие <Link href={'/#'} className="underline">сертификаты</Link>.
+и&nbsp;имеет соответствующие <Link href={'/#'} className="underline">сертификаты</Link>.
             </p>
           </div>
           <div className="flex flex-col max-md:items-center gap-[18px] h-fit">
@@ -80,8 +79,8 @@ export default async function Home() {
               Сроки
             </span>
             <p className="text-[#DADADA] text-xl leading-[115.1%] tracking-[-.02em] max-xl:text-base max-md:text-center">
-              Выезд на монтаж возможен <br/>
-на следующий день после подписания договора. В среднем один дом украшается за 1 день.
+              Выезд на&nbsp;монтаж возможен <br/>
+на&nbsp;следующий день после подписания договора. В&nbsp;среднем один дом украшается за&nbsp;1 день.
             </p>
           </div>
           <div className="flex flex-col max-md:items-center gap-[18px] h-fit">
@@ -90,8 +89,8 @@ export default async function Home() {
               Цена
             </span>
             <p className="text-[#DADADA] text-xl leading-[115.1%] tracking-[-.02em] max-xl:text-base max-md:text-center">
-              Мы никогда не гонимся <br/>
-за низкой ценой в ущерб качеству и безопасности. Если мы можем сделать более экономичным решение без потери качества - всегда говорим об этом нашим клиентам.
+              Мы никогда не&nbsp;гонимся <br/>
+за&nbsp;низкой ценой в&nbsp;ущерб качеству и&nbsp;безопасности. Если мы можем сделать более экономичным решение без&nbsp;потери качества - всегда говорим об&nbsp;этом нашим клиентам.
             </p>
           </div>
           <div className="flex flex-col max-md:items-center gap-[18px] h-fit">
@@ -100,8 +99,8 @@ export default async function Home() {
               Профессионализм
             </span>
             <p className="text-[#DADADA] text-xl leading-[115.1%] tracking-[-.02em] max-xl:text-base max-md:text-center">
-              У вас будут работать квалифицированные электромонтажники с опытом электрофикации загородных домов без холодных скруток<br/> 
-и других некачественных соединений.
+              У&nbsp;вас будут работать квалифицированные электромонтажники с&nbsp;опытом электрофикации загородных домов без&nbsp;холодных скруток<br/> 
+и&nbsp;других некачественных соединений.
             </p>
           </div>
         </div>
@@ -109,8 +108,8 @@ export default async function Home() {
     </section>
     <section id="achivements" className="wrapper flex flex-col items-center gap-[97px] max-lg:md:gap-[60px] pt-[140px] max-md:pt-[113px]">
       <div className="flex flex-col gap-2 items-center">
-        <span className="text-white text-[48px] max-md:text-[32px] leading-[115.1%] tracking-[-.02em] ">С 2016 года </span>
-        <p className="text-[#DADADA] text-[24px] max-md:text-base leading-[115.1%] tracking-[-.02em] ">Мы создаем новогоднее настроение семьям и их гостям!</p>
+        <span className="text-white text-[48px] max-md:text-[32px] leading-[115.1%] tracking-[-.02em] ">С&nbsp;2016 года </span>
+        <p className="text-[#DADADA] text-[24px] max-md:text-base leading-[115.1%] tracking-[-.02em] ">Мы создаем новогоднее настроение семьям и&nbsp;их гостям!</p>
       </div>
       <div className="flex flex-col gap-8 max-md:gap-10 w-full max-md:max-w-md max-md:border-2 border-l-white">
         <div className="flex relative">
@@ -128,11 +127,11 @@ export default async function Home() {
           <div className="flex flex-col gap-6 max-md:gap-3 max-w-[436px] max-md:max-w-[447px] px-[15px] max-md:pl-[50px] bg-background max-md:bg-transparent relative z-20">
             <h5 className="text-white font-medium text-[36px] max-md:text-[24px] leading-[115.1%] tracking-[-.02em]">
               &gt; 12 лет 
-на строительном рынке
+на&nbsp;строительном рынке
             </h5>
             <p className="text-[#DADADA] text-xl max-md:text-base leading-[115.1%] tracking-[-.02em] max-w-[367px]">
               Мы накопили большой опыт 
-и поэтому можем предлагать Вам проекты под ключ
+и&nbsp;поэтому можем предлагать Вам проекты под&nbsp;ключ
             </p>
           </div>
         </div>
@@ -154,7 +153,7 @@ export default async function Home() {
 украшено нами
             </h5>
             <p className="text-[#DADADA] text-xl max-md:text-base leading-[115.1%] tracking-[-.02em] max-w-[367px]">
-              Ценим клиентов и всегда оправдываем их доверие
+              Ценим клиентов и&nbsp;всегда оправдываем их&nbsp;доверие
             </p>
           </div>
         </div>
@@ -176,7 +175,7 @@ export default async function Home() {
             </h5>
             <p className="text-[#DADADA] text-xl max-md:text-base leading-[115.1%] tracking-[-.02em] max-w-[367px]">
               Светодиодными украшениями загородных домов, участков
-и деревьев
+и&nbsp;деревьев
             </p>
           </div>
         </div>
@@ -189,9 +188,9 @@ export default async function Home() {
             Разные бюджеты — один стандарт качества
           </h3>
           <p className="text-[#DADADA] text-[20px] max-md:text-base leading-[115.1%] tracking-[-.02em]">
-            Мы подбираем оборудование и решения под проект, <br/>
+            Мы подбираем оборудование и&nbsp;решения под&nbsp;проект, <br/>
 сохраняя эстетику, безопасность и долговечность. <br/>
-Делаем подсветку, которая безупречна при любом бюджете.
+Делаем подсветку, которая безупречна при&nbsp;любом бюджете.
           </p>
         </div>
         <Image className="max-lg:hidden" src={'/quality-mark-icon.svg'} alt="quality" width={73} height={73}/>
@@ -224,7 +223,7 @@ export default async function Home() {
         <Image className="absolute top-[-30px]" src={'/step-point-icon.svg'} alt="point" width={60} height={60}/>
         <div className="flex flex-col gap-3 max-lg:md:gap-1.5">
           <h4 className={"text-center font-bold text-[32px] max-lg:md:text-xl text-background" + strokeStyle}>Этапы работы</h4>
-          <p className="text-center max-w-[777px] text-background text-xl max-lg:text-xs max-md:text-base">Наша цель не только разработать индивидуальный дизайн-проект и произвести качественный монтаж иллюминации, но и подарить своим клиентам незабываемую атмосферу праздника.</p>
+          <p className="text-center max-w-[777px] text-background text-xl max-lg:text-xs max-md:text-base">Наша цель не&nbsp;только разработать индивидуальный дизайн-проект и&nbsp;произвести качественный монтаж иллюминации, но&nbsp;и&nbsp;подарить своим клиентам незабываемую атмосферу праздника.</p>
         </div>
         <ul className="flex flex-col gap-[98px] max-lg:gap-[57px] max-md:gap-8 w-full">
           <div className="flex max-md:flex-col max-md:gap-8 justify-between max-md:justify-center items-center flex-nowrap w-full">
@@ -254,21 +253,21 @@ export default async function Home() {
           </div>
         </ul>
         <p className={"text-center font-extralight italic text-xl max-lg:text-xs max-md:text-base" + strokeStyle}>
-          *работаем быстро и четко, поэтому не заставим Вас долго ждать
+          *работаем быстро и&nbsp;четко, поэтому не&nbsp;заставим Вас долго ждать
         </p>
       </div>
     </section>
     <section id="garanty" className="wrapper py-[106px] max-lg:pt-[97px] max-lg:pb-32 max-md:pt-[90px] max-md:pb-[113px] flex flex-col items-center gap-8 max-lg:md:gap-10">
       <div className="flex flex-col gap-8 max-ld:gap-4 items-center">
-        <h3 className={"text-white text-[38px] text-center max-lg:text-[32px] max-md:text-2xl font-medium" + strokeStyle}>Безусловная гарантия 12 месяцев — на работы и материалы</h3>
-        <p className={"text-[#DADADA] text-2xl max-lg:text-xl max-md:text-base max-w-[779px] max-md:max-w-[643px] max-sm:max-w-[301px] w-full text-center" + strokeStyle}>Монтаж, электрика и комплектующие — под нашей защитой. Все условия зафиксированы в договоре: сроки реакции, замена при браке и полная ответственность за результат.</p>
+        <h3 className={"text-white text-[38px] text-center max-lg:text-[32px] max-md:text-2xl font-medium" + strokeStyle}>Безусловная гарантия 12 месяцев — на&nbsp;работы и&nbsp;материалы</h3>
+        <p className={"text-[#DADADA] text-2xl max-lg:text-xl max-md:text-base max-w-[779px] max-md:max-w-[643px] max-sm:max-w-[301px] w-full text-center" + strokeStyle}>Монтаж, электрика и&nbsp;комплектующие — под&nbsp;нашей защитой. Все условия зафиксированы в&nbsp;договоре: сроки реакции, замена при&nbsp;браке и&nbsp;полная ответственность за&nbsp;результат.</p>
       </div>
       <Link href={'/#form'}>
-        <AccentButton >Перейти к оформлению</AccentButton>
+        <AccentButton >Перейти к&nbsp;оформлению</AccentButton>
       </Link>
     </section>
     <section id="portfolio" className="wrapper flex flex-col gap-[90px] max-lg:gap-[101px max-md:gap-[113px] items-center">
-      <p className="text-center text-white text-xl max-lg:text-base leading-[140%] tracking-[-.02em] max-w-[927px] max-lg:max-w-[583px] max-md:max-w-none">Мы оформили уже огромное количество домов и знаем, как сделать красиво именно у Вас! Каждый наш проект — это уют, свет и немного волшебства, которое хочется повторять!</p>
+      <p className="text-center text-white text-xl max-lg:text-base leading-[140%] tracking-[-.02em] max-w-[927px] max-lg:max-w-[583px] max-md:max-w-none">Мы оформили уже огромное количество домов и&nbsp;знаем, как сделать красиво именно у&nbsp;Вас! Каждый наш проект —&nbsp;это уют, свет и&nbsp;немного волшебства, которое хочется повторять!</p>
       <div className="flex flex-col w-full gap-4 max-lg:md:gap-2.5">
         <div className="grid grid-cols-[816fr_400fr] max-sm:grid-cols-1 gap-4 max-lg:md:gap-2.5 aspect-1232/504">
           <CaseImage id={1} aspect="816/504"/>
@@ -286,9 +285,9 @@ export default async function Home() {
     </section>
     <section id="feedback" className="wrapper pt-40 max-lg:pt-[60px] pb-[129px] max-lg:pb-[100px] max-md:pb-[105px]">
       <div className="flex flex-col gap-3">
-        <h3 className={"text-white font-medium text-[32px] max-lg:text-2xl max-md:text-xl" + strokeStyle}>Что говорят о нас те, чей дом мы уже наполнили праздником:</h3>
+        <h3 className={"text-white font-medium text-[32px] max-lg:text-2xl max-md:text-xl" + strokeStyle}>Что говорят о&nbsp;нас те, чей дом мы уже наполнили праздником:</h3>
         <p className={"text-[#DADADA] text-2xl max-lg:text-base" + strokeStyle}>
-          Каждый дом для нас — особенный, и мы искренне радуемся, <br/>
+          Каждый дом для нас —&nbsp;особенный, и&nbsp;мы искренне радуемся, <br/>
 когда результат вызывает улыбку.
         </p>
       </div>
@@ -302,7 +301,7 @@ export default async function Home() {
         </div>
       </div>
       <div className="mt-[102px] items-center w-full flex flex-col gap-5">
-        <span className={"text-[#DADADA] text-2xl" + strokeStyle}>Ищите нас на ЯндексКартах!</span>
+        <span className={"text-[#DADADA] text-2xl" + strokeStyle}>Ищите нас на&nbsp;ЯндексКартах!</span>
         <Link href={'https://yandex.ru/maps/-/CLC2VI~0'}>
           <AccentButton>Искать</AccentButton>
         </Link>
@@ -316,7 +315,7 @@ export default async function Home() {
         <div className="flex flex-col gap-3">
           <h3 className={"text-white text-[32px] max-lg:text-2xl font-medium" + strokeStyle}>Наша команда</h3>
           <p className={"text-[#DADADA] text-2xl max-lg:text-base max-md:text-xs max-w-[739px] max-lg:max-w-[602px] max-md:max-w-none" + strokeStyle}>
-            За каждой красивой подсветкой стоят не просто гирлянды, а люди, которые любят своё дело. Познакомьтесь с нашей командой — теми, кто делает праздник уютным, тёплым и светлым.
+            За&nbsp;каждой красивой подсветкой стоят не&nbsp;просто гирлянды, а&nbsp;люди, которые любят своё дело. Познакомьтесь с&nbsp;нашей командой — теми, кто делает праздник уютным, тёплым и&nbsp;светлым.
           </p>
         </div>
         <div className="relative h-[66px] max-md:h-[39px] w-[31px] max-md:w-[19px] max-md:hidden">

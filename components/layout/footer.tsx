@@ -10,7 +10,7 @@ export default function Footer() {
             <div><Link href={'tel:+78124093099'}>8 (812) 409-30-99</Link><br /><Link href={'mailto:info@pzkgroup.ru'}>info@pzkgroup.ru</Link></div>
           </div>
           <div className="flex flex-col gap-3 max-md:gap-1.5">
-            <span>Ищите нас по адресу</span>
+            <span>Ищите нас по&nbsp;адресу</span>
             <Link href={'/#'}>Санкт-Петербург, Выборгское шоссе, д. 234</Link>
           </div>
         </div>
