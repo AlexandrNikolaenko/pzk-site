@@ -302,7 +302,7 @@ export default async function Home() {
         </div>
       </div>
       <div className="mt-[102px] items-center w-full flex flex-col gap-5">
-        <span className={"text-[#DADADA] text-2xl" + strokeStyle}>Ищите нас на&nbsp;ЯндексКартах!</span>
+        <span className={"text-[#DADADA] text-2xl text-center" + strokeStyle}>Ищите нас на&nbsp;ЯндексКартах!</span>
         <Link href={'https://yandex.ru/maps/-/CLC2VI~0'}>
           <AccentButton>Искать</AccentButton>
         </Link>
