@@ -1,6 +1,7 @@
 'use server'
 
 import AccentButton from "@/components/button/accent-button";
+import Form from "@/components/form/form";
 import CaseImage from "@/components/main/case";
 import FeedbackLent from "@/components/main/feedback-lent";
 import Gallery from "@/components/main/gallery-image";
@@ -23,7 +24,9 @@ export default async function Home() {
             Профессиональная праздничная и контурная подсветка загородных домов <br/>
 — без хлопот и суеты
           </p>
-          <AccentButton >Получить расчет</AccentButton>
+          <Link href={'/#form'}>
+            <AccentButton >Получить расчет</AccentButton>
+          </Link>
         </div>
       </div>
       <div className="absolute h-[234px] w-full bottom-0 bg-linear-to-b from-transparent to-background">
@@ -219,7 +222,7 @@ export default async function Home() {
         <Image className="absolute top-[-30px]" src={'/step-point-icon.svg'} alt="point" width={60} height={60}/>
         <div className="flex flex-col gap-3 max-lg:md:gap-1.5">
           <h4 className={"text-center font-bold text-[32px] max-lg:md:text-xl text-background" + strokeStyle}>Этапы работы</h4>
-          <p className="text-center max-w-[777px] text-background text-xl max-lg:text-sm max-md:text-base">Наша цель не только разработать индивидуальный дизайн-проект и произвести качественный монтаж иллюминации, но и подарить своим клиентам незабываемую атмосферу праздника.</p>
+          <p className="text-center max-w-[777px] text-background text-xl max-lg:text-xs max-md:text-base">Наша цель не только разработать индивидуальный дизайн-проект и произвести качественный монтаж иллюминации, но и подарить своим клиентам незабываемую атмосферу праздника.</p>
         </div>
         <ul className="flex flex-col gap-[98px] max-lg:gap-[57px] max-md:gap-8 w-full">
           <div className="flex max-md:flex-col max-md:gap-8 justify-between max-md:justify-center items-center flex-nowrap w-full">
@@ -248,7 +251,7 @@ export default async function Home() {
             <StepPoint id={3} body="Выезжаем на замер с образцами гирлянд"/>
           </div>
         </ul>
-        <p className={"text-center font-extralight italic text-xl max-lg:text-sm max-md:text-base" + strokeStyle}>
+        <p className={"text-center font-extralight italic text-xl max-lg:text-xs max-md:text-base" + strokeStyle}>
           *работаем быстро и четко, поэтому не заставим Вас долго ждать
         </p>
       </div>
@@ -258,7 +261,9 @@ export default async function Home() {
         <h3 className={"text-white text-[38px] text-center max-lg:text-[32px] max-md:text-2xl font-medium" + strokeStyle}>Безусловная гарантия 12 месяцев — на работы и материалы</h3>
         <p className={"text-[#DADADA] text-2xl max-lg:text-xl max-md:text-base max-w-[779px] max-lg:max-w-[643px] max-md:max-w-[301px] w-full text-center" + strokeStyle}>Монтаж, электрика и комплектующие — под нашей защитой. Все условия зафиксированы в договоре: сроки реакции, замена при браке и полная ответственность за результат.</p>
       </div>
-      <AccentButton >Перейти к оформлению</AccentButton>
+      <Link href={'/#form'}>
+        <AccentButton >Перейти к оформлению</AccentButton>
+      </Link>
     </section>
     <section id="portfolio" className="wrapper flex flex-col gap-[90px] items-center">
       <p className="text-center text-white text-xl max-lg:text-base leading-[140%] tracking-[-.02em] max-w-[927px] max-lg:max-w-[583px] max-md:max-w-none">Мы оформили уже огромное количество домов и знаем, как сделать красиво именно у Вас! Каждый наш проект — это уют, свет и немного волшебства, которое хочется повторять!</p>
@@ -300,6 +305,9 @@ export default async function Home() {
           <AccentButton>Искать</AccentButton>
         </Link>
       </div>
+    </section>
+    <section id="form" className="flex items-center justify-center h-screen bg-[url(/form-fon.jpg)] bg-no-repeat bg-cover bg-center">
+      <Form />
     </section>
    </main>
   );

@@ -9,6 +9,39 @@ button {
   cursor: pointer;
 }
 
+input, input:active, input:focus, input:hover {
+  outline: none;
+  appearance: none !important;
+  color: var(--color-background);
+  font-size: 20px !important;
+
+  @media screen and (max-width: 640px) {
+    font-size: 12px !important;
+  }
+}
+
+/* Для Chrome, Safari и Edge */
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #B6B6B6 inset; /* меняет фон */
+  -webkit-text-fill-color: var(--color-background); /* меняет цвет текста */
+  font-size: 20px !important;
+  letter-spacing: -.02em;
+  transition: background-color 5000s ease-in-out 0s; /* предотвращает мерцание */
+
+  @media screen and (max-width: 640px) {
+    font-size: 12px !important;
+  }
+}
+
+/* Для Firefox */
+input:-moz-autofill {
+  box-shadow: 0 0 0px 1000px #002a90 inset;
+  -moz-text-fill-color: white;
+  font-size: 15px !important;
+  letter-spacing: -.02em;
+  line-height: 115%;
+}
+
 section:first-child {
   min-height: 1000px;
   background: url('/main-fon.jpg') center bottom no-repeat;
