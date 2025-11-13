@@ -5,9 +5,11 @@ import Form from "@/components/form/form";
 import CaseImage from "@/components/main/case";
 import FeedbackLent from "@/components/main/feedback-lent";
 import Gallery from "@/components/main/gallery-image";
+import PersonCard from "@/components/main/person-card";
 import ScrollFeedbackArrow from "@/components/main/scrooll-feedback-arrow";
 import ServiceCard from "@/components/main/service-card";
 import StepPoint from "@/components/main/step";
+import { persons } from "@/data/data";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -105,7 +107,7 @@ export default async function Home() {
         </div>
       </div>
     </section>
-    <section id="achivements" className="wrapper flex flex-col items-center gap-[97px] max-md:md:gap-[60px] pt-[140px]">
+    <section id="achivements" className="wrapper flex flex-col items-center gap-[97px] max-lg:md:gap-[60px] pt-[140px] max-md:pt-[113px]">
       <div className="flex flex-col gap-2 items-center">
         <span className="text-white text-[48px] max-md:text-[32px] leading-[115.1%] tracking-[-.02em] ">С 2016 года </span>
         <p className="text-[#DADADA] text-[24px] max-md:text-base leading-[115.1%] tracking-[-.02em] ">Мы создаем новогоднее настроение семьям и их гостям!</p>
@@ -180,7 +182,7 @@ export default async function Home() {
         </div>
       </div>
     </section>
-    <section className="wrapper pt-[190px] pb-[129px] flex flex-col gap-[52px]">
+    <section className="wrapper pt-[190px] max-lg:pt-28 max-md:pt-[95px] pb-[129px] max-lg:pb-[78px] max-md:pb-[114px] flex flex-col gap-[52px]">
       <div className="flex justify-between itmes-start">
         <div className="flex flex-col gap-4">
           <h3 className="text-white font-medium text-[36px] max-lg:text-[32px] max-md:text-[24px] leading-[115.1%] tracking-[-.02em]">
@@ -227,25 +229,25 @@ export default async function Home() {
         <ul className="flex flex-col gap-[98px] max-lg:gap-[57px] max-md:gap-8 w-full">
           <div className="flex max-md:flex-col max-md:gap-8 justify-between max-md:justify-center items-center flex-nowrap w-full">
             <StepPoint id={1} body="Вы оставляете заявку или звоните нам"/>
-            <div className="relative w-[99px] max-lg:w-[59px] max-mg:w-[66px] h-[47px] max-lg:h-7 max-md:h-[31px] max-md:rotate-90">
+            <div className="relative w-[99px] max-lg:w-[59px] max-md:w-[66px] h-[47px] max-lg:h-7 max-md:h-[31px] max-md:rotate-90">
               <Image src={'/step-arrow-icon.svg'} alt="next" fill/> 
             </div>
             <StepPoint id={2} body="С вами связывается наш менеджер"/>
-            <div className="relative w-[99px] max-lg:w-[59px] max-mg:w-[66px] h-[47px] max-lg:h-7 max-md:h-[31px] max-md:rotate-90">
+            <div className="relative w-[99px] max-lg:w-[59px] max-md:w-[66px] h-[47px] max-lg:h-7 max-md:h-[31px] max-md:rotate-90">
               <Image src={'/step-arrow-icon.svg'} alt="next" fill/> 
             </div>
             <StepPoint id={3} body="Выезжаем на замер с образцами гирлянд"/>
-            <div className="relative md:hidden w-[99px] max-lg:w-[59px] max-mg:w-[66px] h-[47px] max-lg:h-7 max-md:h-[31px] max-md:rotate-90">
+            <div className="relative md:hidden w-[99px] max-lg:w-[59px] max-md:w-[66px] h-[47px] max-lg:h-7 max-md:h-[31px] max-md:rotate-90">
               <Image src={'/step-arrow-icon.svg'} alt="next" fill/> 
             </div>
           </div>
           <div className="flex max-md:flex-col max-md:gap-8 justify-between max-md:justify-center items-center flex-nowrap w-full">
             <StepPoint id={1} body="Вы оставляете заявку или звоните нам"/>
-            <div className="relative w-[99px] max-lg:w-[59px] max-mg:w-[66px] h-[47px] max-lg:h-7 max-md:h-[31px] max-md:rotate-90">
+            <div className="relative w-[99px] max-lg:w-[59px] max-md:w-[66px] h-[47px] max-lg:h-7 max-md:h-[31px] max-md:rotate-90">
               <Image src={'/step-arrow-icon.svg'} alt="next" fill/> 
             </div>
             <StepPoint id={2} body="С вами связывается наш менеджер"/>
-            <div className="relative w-[99px] max-lg:w-[59px] max-mg:w-[66px] h-[47px] max-lg:h-7 max-md:h-[31px] max-md:rotate-90">
+            <div className="relative w-[99px] max-lg:w-[59px] max-md:w-[66px] h-[47px] max-lg:h-7 max-md:h-[31px] max-md:rotate-90">
               <Image src={'/step-arrow-icon.svg'} alt="next" fill/> 
             </div>
             <StepPoint id={3} body="Выезжаем на замер с образцами гирлянд"/>
@@ -256,16 +258,16 @@ export default async function Home() {
         </p>
       </div>
     </section>
-    <section id="garanty" className="wrapper py-[106px] flex flex-col items-center gap-8 max-lg:md:gap-10">
-      <div className="flex flex-col gap-8 max-ld:gap-4">
+    <section id="garanty" className="wrapper py-[106px] max-lg:pt-[97px] max-lg:pb-32 max-md:pt-[90px] max-md:pb-[113px] flex flex-col items-center gap-8 max-lg:md:gap-10">
+      <div className="flex flex-col gap-8 max-ld:gap-4 items-center">
         <h3 className={"text-white text-[38px] text-center max-lg:text-[32px] max-md:text-2xl font-medium" + strokeStyle}>Безусловная гарантия 12 месяцев — на работы и материалы</h3>
-        <p className={"text-[#DADADA] text-2xl max-lg:text-xl max-md:text-base max-w-[779px] max-lg:max-w-[643px] max-md:max-w-[301px] w-full text-center" + strokeStyle}>Монтаж, электрика и комплектующие — под нашей защитой. Все условия зафиксированы в договоре: сроки реакции, замена при браке и полная ответственность за результат.</p>
+        <p className={"text-[#DADADA] text-2xl max-lg:text-xl max-md:text-base max-w-[779px] max-md:max-w-[643px] max-sm:max-w-[301px] w-full text-center" + strokeStyle}>Монтаж, электрика и комплектующие — под нашей защитой. Все условия зафиксированы в договоре: сроки реакции, замена при браке и полная ответственность за результат.</p>
       </div>
       <Link href={'/#form'}>
         <AccentButton >Перейти к оформлению</AccentButton>
       </Link>
     </section>
-    <section id="portfolio" className="wrapper flex flex-col gap-[90px] items-center">
+    <section id="portfolio" className="wrapper flex flex-col gap-[90px] max-lg:gap-[101px max-md:gap-[113px] items-center">
       <p className="text-center text-white text-xl max-lg:text-base leading-[140%] tracking-[-.02em] max-w-[927px] max-lg:max-w-[583px] max-md:max-w-none">Мы оформили уже огромное количество домов и знаем, как сделать красиво именно у Вас! Каждый наш проект — это уют, свет и немного волшебства, которое хочется повторять!</p>
       <div className="flex flex-col w-full gap-4 max-lg:md:gap-2.5">
         <div className="grid grid-cols-[816fr_400fr] max-sm:grid-cols-1 gap-4 max-lg:md:gap-2.5 aspect-1232/504">
@@ -282,7 +284,7 @@ export default async function Home() {
         </div>
       </div>
     </section>
-    <section id="feedback" className="wrapper pt-40 pb-[129px]">
+    <section id="feedback" className="wrapper pt-40 max-lg:pt-[60px] pb-[129px] max-lg:pb-[100px] max-md:pb-[105px]">
       <div className="flex flex-col gap-3">
         <h3 className={"text-white font-medium text-[32px] max-lg:text-2xl max-md:text-xl" + strokeStyle}>Что говорят о нас те, чей дом мы уже наполнили праздником:</h3>
         <p className={"text-[#DADADA] text-2xl max-lg:text-base" + strokeStyle}>
@@ -308,6 +310,24 @@ export default async function Home() {
     </section>
     <section id="form" className="flex items-center justify-center h-screen bg-[url(/form-fon.jpg)] bg-no-repeat bg-cover bg-center">
       <Form />
+    </section>
+    <section id="team" className="pt-40 max-md:pt-[62px] pb-[116px] max-lg:pb-10 max-md:pb-11 wrapper flex flex-col gap-[92px] max-lg:gap-[53px] max-md:gap-[62px] ">
+      <div className="flex justify-between">
+        <div className="flex flex-col gap-3">
+          <h3 className={"text-white text-[32px] max-lg:text-2xl font-medium" + strokeStyle}>Наша команда</h3>
+          <p className={"text-[#DADADA] text-2xl max-lg:text-base max-md:text-xs max-w-[739px] max-lg:max-w-[602px] max-md:max-w-none" + strokeStyle}>
+            За каждой красивой подсветкой стоят не просто гирлянды, а люди, которые любят своё дело. Познакомьтесь с нашей командой — теми, кто делает праздник уютным, тёплым и светлым.
+          </p>
+        </div>
+        <div className="relative h-[66px] max-md:h-[39px] w-[31px] max-md:w-[19px] max-md:hidden">
+          <Image src={'/arrow-persons.svg'} alt="next" fill/> 
+        </div>
+      </div>
+      <ul className="grid grid-cols-4 max-md:grid-cols-2 gap-x-4 max-lg:gap-2.5 max-md:gap-x-5 gap-y-[76px] max-lg:gap-y-[34px] max-md:gap-y-[52px]">
+        {
+          persons.map(person => <PersonCard key={person.id} {...person}/>)
+        }
+      </ul>
     </section>
    </main>
   );

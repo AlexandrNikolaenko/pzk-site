@@ -3,18 +3,18 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer className="w-full bg-[#00030B]">
-      <div className="wrapper grid grid-cols-2">
+      <div className="wrapper grid grid-cols-2 max-sm:flex justify-between gap-5">
         <div className="flex flex-col justify-between">
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-col gap-3 max-md:gap-1.5">
             <span>Контакты</span>
             <div><Link href={'tel:+78124093099'}>8 (812) 409-30-99</Link><br /><Link href={'mailto:info@pzkgroup.ru'}>info@pzkgroup.ru</Link></div>
           </div>
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-col gap-3 max-md:gap-1.5">
             <span>Ищите нас по адресу</span>
             <Link href={'/#'}>Санкт-Петербург, Выборгское шоссе, д. 234</Link>
           </div>
         </div>
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-3 max-md:gap-1.5">
           <span>Навигация</span>
           <Link href={'/#service'}>Спектр услуг</Link>
           <Link href={'/#portfolio'}>Наши работы</Link>
