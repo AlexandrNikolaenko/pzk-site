@@ -5,9 +5,9 @@ body {
   font-family: var(--font-inter-sans);
 }
 
-// section {
-//   min-height: 100vh;
-// }
+button {
+  cursor: pointer;
+}
 
 section:first-child {
   min-height: 1000px;
@@ -63,6 +63,6 @@ footer {
   }
 }
 
-#gallery-lent::-webkit-scrollbar {
+#gallery-lent::-webkit-scrollbar, #feedback-lent::-webkit-scrollbar {
   display: none;
 }

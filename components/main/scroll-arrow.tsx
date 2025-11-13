@@ -2,10 +2,9 @@
 
 import Image from "next/image";
 
-export default function ScrollArrow({dir}: {dir: 1 | -1}) {
+export default function ScrollArrow({dir, elemId}: {dir: 1 | -1, elemId: string}) {
   function handleScrollGallery() {
-    const lent = document.getElementById('gallery-lent');
-    console.log(lent?.scrollLeft);
+    const lent = document.getElementById(elemId);
     
     if (lent && lent.scrollLeft > 3455 * 3) {
       lent?.scroll({left: lent.scrollLeft - 3455, behavior: 'instant'});
@@ -13,7 +12,6 @@ export default function ScrollArrow({dir}: {dir: 1 | -1}) {
       lent?.scroll({left: lent.scrollLeft + 3455, behavior: 'instant'});
     }
     lent?.scroll({left: lent.scrollLeft + (dir * 400), behavior: 'smooth'});
-    console.log(lent?.scrollLeft);
   }
 
 

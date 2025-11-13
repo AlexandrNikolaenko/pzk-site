@@ -2,8 +2,9 @@
 
 import AccentButton from "@/components/button/accent-button";
 import CaseImage from "@/components/main/case";
+import FeedbackLent from "@/components/main/feedback-lent";
 import Gallery from "@/components/main/gallery-image";
-import ScrollArrow from "@/components/main/scroll-arrow";
+import ScrollFeedbackArrow from "@/components/main/scrooll-feedback-arrow";
 import ServiceCard from "@/components/main/service-card";
 import StepPoint from "@/components/main/step";
 import Image from "next/image";
@@ -43,11 +44,8 @@ export default async function Home() {
       </div>
     </section>
     <section id="gallery" className="relative pb-0 max-xl:pb-[113px]">
-      <div id="gallery-lent" className=" max-w-[100vw] overflow-x-scroll">
+      <div id="gallery-lent" className="max-w-[100vw] overflow-x-scroll">
         <Gallery />
-        
-        <ScrollArrow dir={-1} />
-        <ScrollArrow dir={1} />
       </div>
     </section>
     <section id="goal" className="wrapper flex justify-center py-[53px]">
@@ -277,6 +275,30 @@ export default async function Home() {
           <CaseImage id={5} aspect="600/560"/>
           <CaseImage id={6} aspect="616/560"/>
         </div>
+      </div>
+    </section>
+    <section id="feedback" className="wrapper pt-40 pb-[129px]">
+      <div className="flex flex-col gap-3">
+        <h3 className={"text-white font-medium text-[32px] max-lg:text-2xl max-md:text-xl" + strokeStyle}>Что говорят о нас те, чей дом мы уже наполнили праздником:</h3>
+        <p className={"text-[#DADADA] text-2xl max-lg:text-base" + strokeStyle}>
+          Каждый дом для нас — особенный, и мы искренне радуемся, <br/>
+когда результат вызывает улыбку.
+        </p>
+      </div>
+      <div className="mt-32 w-full flex flex-col gap-8">
+        <div id={'feedback-lent'} className="overflow-x-scroll w-full">
+          <FeedbackLent />
+        </div>
+        <div className="flex justify-between">
+          <ScrollFeedbackArrow dir={-1} elemId="feedback-lent"/>
+          <ScrollFeedbackArrow dir={1} elemId="feedback-lent"/>
+        </div>
+      </div>
+      <div className="mt-[102px] items-center w-full flex flex-col gap-5">
+        <span className={"text-[#DADADA] text-2xl" + strokeStyle}>Ищите нас на ЯндексКартах!</span>
+        <Link href={'https://yandex.ru/maps/-/CLC2VI~0'}>
+          <AccentButton>Искать</AccentButton>
+        </Link>
       </div>
     </section>
    </main>
