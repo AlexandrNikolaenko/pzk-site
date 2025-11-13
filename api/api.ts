@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 class HttpRequest {
   #api_host: string;
 
@@ -36,7 +38,7 @@ class HttpRequest {
         const data = await res.json();
         if (onSuccess) onSuccess(data);
         return data;
-      } else throw new Error(String(res.status));
+      } else throw await res.json()
     } catch (e) {
       console.log(e);
       if (onError) onError(e);
@@ -110,12 +112,12 @@ class HttpRequest {
 interface PostQuery {
   body: object;
   onSuccess: (data: object) => void;
-  onError: (error: unknown) => void;
+  onError: (error: any) => void;
 }
 
 interface GetQuery {
   onSuccess: (data: object) => void;
-  onError: (error: unknown) => void;
+  onError: (error: any) => void;
 }
 
 export default class Api {
