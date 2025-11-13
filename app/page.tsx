@@ -58,17 +58,17 @@ export default async function Home() {
       </h2>
     </section>
     <section id="advantages" className="relative w-full">
-      <div className="wrapper max-[1100px]:relative flex max-md:flex-col gap-[60px]">
-        <div className="relative min-w-[544px] max-w-[544px] max-xl:w-full max-xl:min-w-0 max-xl:max-w-none h-[620px] max-xl:h-auto max-md:aspect-380/430">
+      <div className="mx-auto max-w-[1232px] w-full max-[1440px]:m-0 max-[1440px]:max-w-none max-[1440px]:pl-0 max-[1440px]:pr-[90px] max-xl:px-[46px] max-[550px]:px-[30px] max-[1100px]:relative flex xl:items-center max-md:flex-col gap-[60px]">
+        <div className="relative min-w-[544px] max-w-[544px] w-full max-xl:min-w-0 max-xl:max-w-none h-[620px] max-xl:h-auto max-md:aspect-380/430">
           <Image src={'/advantages-fon.jpg'} alt="fon" fill objectFit="cover"/>  
         </div>
-        <div className="pt-[89px] max-xl:pt-0 grid grid-cols-2 w-full max-xl:grid-cols-1 gap-[70px] max-[1440px]:gap-9">
+        <div className=" max-xl:pt-0 grid grid-cols-2 w-full max-xl:grid-cols-1 gap-[70px] max-xl:gap-9">
           <div className="flex flex-col max-md:items-center gap-[18px] h-fit">
             <span className="flex items-center gap-5 text-[#545454] text-[28px] leading-[115.1%] tracking-[-.02em]">
               <Image src={'/quality-icon.svg'} width={36} height={36} alt="quality"/>
               Качество
             </span>
-            <p className="text-[#DADADA] text-xl leading-[115.1%] tracking-[-.02em] max-xl:text-base max-md:text-center">
+            <p className="text-[#DADADA] font-light w-[320px] max-w-[320px] max-xl:max-w-[281px] text-xl leading-[115.1%] tracking-[-.02em] max-xl:text-base max-md:text-center">
               Все используемое светодиодное оборудование влагозащищено <br/>
 и&nbsp;имеет соответствующие <Link href={'/#'} className="underline">сертификаты</Link>.
             </p>
@@ -78,8 +78,8 @@ export default async function Home() {
               <Image src={'/timeout-icon.svg'} width={36} height={36} alt="timeout"/>
               Сроки
             </span>
-            <p className="text-[#DADADA] text-xl leading-[115.1%] tracking-[-.02em] max-xl:text-base max-md:text-center">
-              Выезд на&nbsp;монтаж возможен <br/>
+            <p className="text-[#DADADA] font-light w-[320px] max-w-[320px] max-xl:max-w-[281px] text-xl leading-[115.1%] tracking-[-.02em] max-xl:text-base max-md:text-center">
+              Выезд на&nbsp;монтаж возможен
 на&nbsp;следующий день после подписания договора. В&nbsp;среднем один дом украшается за&nbsp;1 день.
             </p>
           </div>
@@ -88,8 +88,8 @@ export default async function Home() {
               <Image src={'/price-icon.svg'} width={43} height={43} alt="price"/>
               Цена
             </span>
-            <p className="text-[#DADADA] text-xl leading-[115.1%] tracking-[-.02em] max-xl:text-base max-md:text-center">
-              Мы никогда не&nbsp;гонимся <br/>
+            <p className="text-[#DADADA] font-light w-[330px] max-w-[330px] max-xl:max-w-[316px] text-xl leading-[115.1%] tracking-[-.02em] max-xl:text-base max-md:text-center">
+              Мы никогда не&nbsp;гонимся
 за&nbsp;низкой ценой в&nbsp;ущерб качеству и&nbsp;безопасности. Если мы можем сделать более экономичным решение без&nbsp;потери качества - всегда говорим об&nbsp;этом нашим клиентам.
             </p>
           </div>
@@ -98,8 +98,8 @@ export default async function Home() {
               <Image src={'/prof-icon.svg'} width={41} height={41} alt="proffecional"/>
               Профессионализм
             </span>
-            <p className="text-[#DADADA] text-xl leading-[115.1%] tracking-[-.02em] max-xl:text-base max-md:text-center">
-              У&nbsp;вас будут работать квалифицированные электромонтажники с&nbsp;опытом электрофикации загородных домов без&nbsp;холодных скруток<br/> 
+            <p className="text-[#DADADA] font-light w-[320px] max-w-[320px] max-xl:max-w-[323px] text-xl leading-[115.1%] tracking-[-.02em] max-xl:text-base max-md:text-center">
+              У&nbsp;вас будут работать квалифицированные электромонтажники с&nbsp;опытом электрофикации загородных домов без&nbsp;холодных скруток
 и&nbsp;других некачественных соединений.
             </p>
           </div>
@@ -124,8 +124,8 @@ export default async function Home() {
           <div className="absolute top-[63px] w-full h-0.5 bg-white z-0 max-md:hidden">
           </div>
 
-          <div className="flex flex-col gap-6 max-md:gap-3 max-w-[436px] max-md:max-w-[447px] px-[15px] max-md:pl-[50px] bg-background max-md:bg-transparent relative z-20">
-            <h5 className="text-white font-medium text-[36px] max-md:text-[24px] leading-[115.1%] tracking-[-.02em]">
+          <div className="flex flex-col gap-6 max-md:gap-3 max-w-[466px] max-md:max-w-[447px] px-[15px] max-md:pl-[50px] bg-background max-md:bg-transparent relative z-20">
+            <h5 className="text-white w-full font-medium text-[36px] max-md:text-[24px] leading-[115.1%] tracking-[-.02em]">
               &gt; 12 лет 
 на&nbsp;строительном рынке
             </h5>
@@ -147,7 +147,7 @@ export default async function Home() {
           <div className="absolute top-[63px] w-full h-0.5 bg-white z-0 max-md:hidden">
           </div>
 
-          <div className="flex flex-col gap-6 max-md:gap-3 max-w-[320px] max-md:max-w-[447px] px-[15px] max-md:pl-[50px] bg-background max-md:bg-transparent relative z-20">
+          <div className="flex flex-col gap-6 max-md:gap-3 max-w-[350px] max-md:max-w-[447px] px-[15px] max-md:pl-[50px] bg-background max-md:bg-transparent relative z-20">
             <h5 className="text-white font-medium text-[36px] max-md:text-[24px] leading-[115.1%] tracking-[-.02em] ">
               &gt; 834 объектов
 украшено нами
@@ -158,18 +158,18 @@ export default async function Home() {
           </div>
         </div>
         <div className="flex relative justify-end max-md:justify-start">
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" className="absolute top-[54px] max-md:top-0 -left-2.5 z-0" xmlns="http://www.w3.org/2000/svg">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" className="absolute top-[11px] max-md:top-0 -left-2.5 z-0" xmlns="http://www.w3.org/2000/svg">
             <circle cx="10" cy="10" r="10" fill="#E3B54B"/>
           </svg>
 
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" className="absolute hidden top-[54px] -right-2.5 z-0" xmlns="http://www.w3.org/2000/svg">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" className="absolute max-md:hidden top-[11px] -right-2.5 z-0" xmlns="http://www.w3.org/2000/svg">
             <circle cx="10" cy="10" r="10" fill="#E3B54B"/>
           </svg>
 
-          <div className="absolute top-[63px] w-full h-0.5 bg-white z-0 max-md:hidden">
+          <div className="absolute top-[21px] w-full h-0.5 bg-white z-0 max-md:hidden">
           </div>
 
-          <div className="flex flex-col gap-6 max-md:gap-3 max-w-[436px] max-md:max-w-[447px] px-[15px] max-md:pl-[50px] bg-background max-md:bg-transparent relative z-20">
+          <div className="flex flex-col gap-6 max-md:gap-3 max-w-[436px] md:mr-[50px] max-md:max-w-[447px] pl-[15px] max-md:pl-[50px] bg-background max-md:bg-transparent relative z-20">
             <h5 className="text-white font-medium text-[36px] max-md:text-[24px] leading-[115.1%] tracking-[-.02em]">
               &gt; 8 лет занимаемся
             </h5>
@@ -187,9 +187,9 @@ export default async function Home() {
           <h3 className="text-white font-medium text-[36px] max-lg:text-[32px] max-md:text-[24px] leading-[115.1%] tracking-[-.02em]">
             Разные бюджеты —&nbsp;один стандарт качества
           </h3>
-          <p className="text-[#DADADA] text-[20px] max-md:text-base leading-[115.1%] tracking-[-.02em]">
-            Мы подбираем оборудование и&nbsp;решения под&nbsp;проект,
-сохраняя эстетику, безопасность и&nbsp;долговечность.
+          <p className="text-[#DADADA] text-[20px] max-w-[774px] max-md:text-base leading-[115.1%] tracking-[-.02em]">
+            Мы подбираем оборудование и&nbsp;решения под&nbsp;проект,<br  className="max-md:hidden"/>
+сохраняя эстетику, безопасность и&nbsp;долговечность.<br className="max-md:hidden" />
 Делаем подсветку, которая безупречна при&nbsp;любом бюджете.
           </p>
         </div>
@@ -235,7 +235,7 @@ export default async function Home() {
             <div className="relative w-[99px] max-lg:w-[59px] max-md:w-[66px] h-[47px] max-lg:h-7 max-md:h-[31px] max-md:rotate-90">
               <Image src={'/step-arrow-icon.svg'} alt="next" fill/> 
             </div>
-            <StepPoint id={3} body="Выезжаем на замер с образцами гирлянд"/>
+            <StepPoint id={3} body="Выезжаем на&nbsp;замер с&nbsp;образцами гирлянд"/>
             <div className="relative md:hidden w-[99px] max-lg:w-[59px] max-md:w-[66px] h-[47px] max-lg:h-7 max-md:h-[31px] max-md:rotate-90">
               <Image src={'/step-arrow-icon.svg'} alt="next" fill/> 
             </div>
@@ -260,7 +260,7 @@ export default async function Home() {
     <section id="garanty" className="wrapper py-[106px] max-lg:pt-[97px] max-lg:pb-32 max-md:pt-[90px] max-md:pb-[113px] flex flex-col items-center gap-8 max-lg:md:gap-10">
       <div className="flex flex-col gap-8 max-ld:gap-4 items-center">
         <h3 className={"text-white text-[38px] text-center max-lg:text-[32px] max-md:text-2xl font-medium" + strokeStyle}>Безусловная гарантия 12 месяцев — на&nbsp;работы и&nbsp;материалы</h3>
-        <p className={"text-[#DADADA] text-2xl max-lg:text-xl max-md:text-base max-w-[779px] max-md:max-w-[643px] max-sm:max-w-[301px] w-full text-center" + strokeStyle}>Монтаж, электрика и&nbsp;комплектующие — под&nbsp;нашей защитой. Все условия зафиксированы в&nbsp;договоре: сроки реакции, замена при&nbsp;браке и&nbsp;полная ответственность за&nbsp;результат.</p>
+        <p className={"text-[#DADADA] text-2xl max-lg:text-xl max-md:text-base max-w-[779px] max-md:max-w-[643px] max-sm:max-w-[301px] w-full text-center" + strokeStyle}>Монтаж, электрика и&nbsp;комплектующие — под&nbsp;нашей защитой. Все&nbsp;условия зафиксированы в&nbsp;договоре: сроки реакции, замена при&nbsp;браке и&nbsp;полная ответственность за&nbsp;результат.</p>
       </div>
       <Link href={'/#form'}>
         <AccentButton >Перейти к оформлению</AccentButton>
@@ -314,8 +314,8 @@ export default async function Home() {
       <div className="flex justify-between">
         <div className="flex flex-col gap-3">
           <h3 className={"text-white text-[32px] max-lg:text-2xl font-medium" + strokeStyle}>Наша команда</h3>
-          <p className={"text-[#DADADA] text-2xl max-lg:text-base max-md:text-xs max-w-[739px] max-lg:max-w-[602px] max-md:max-w-none" + strokeStyle}>
-            За&nbsp;каждой красивой подсветкой стоят не&nbsp;просто гирлянды, а&nbsp;люди, которые любят своё дело. Познакомьтесь с&nbsp;нашей командой — теми, кто делает праздник уютным, тёплым и&nbsp;светлым.
+          <p className={"text-[#DADADA] text-2xl max-lg:text-base max-sm:text-xs max-w-[739px] max-lg:max-w-[602px] max-sm:max-w-none" + strokeStyle}>
+            За&nbsp;каждой красивой подсветкой стоят не&nbsp;просто гирлянды, а&nbsp;люди, которые любят своё дело.<br className="max-lg:md:hidden"/> Познакомьтесь с&nbsp;нашей командой — теми, кто делает праздник уютным, тёплым и&nbsp;светлым.
           </p>
         </div>
         <div className="relative h-[66px] max-md:h-[39px] w-[31px] max-md:w-[19px] max-md:hidden">

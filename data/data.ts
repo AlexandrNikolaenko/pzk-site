@@ -13,7 +13,7 @@ export const persons: Person[] = [
     image: '/person2.jpg',
     name: 'Богдан Родионов',
     position: 'Директор по логистике',
-    interest: '(МС по ориентированию)'
+    interest: '(МС по&nbsp;ориентированию)'
   },
   {
     id: 13,

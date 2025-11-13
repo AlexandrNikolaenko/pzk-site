@@ -1,10 +1,26 @@
+'use client'
+
 import Image from "next/image";
+import { useEffect, useRef } from "react";
 
 export type Person = {id: number, image: string, name: string, position: string, interest: string}
 
 export default function PersonCard({id, image, name, position, interest}: Person) {
+  const link = useRef<HTMLLIElement>(null);
+
+  useEffect(() => {
+    if (link.current) {
+      link.current.querySelectorAll('p, h1, h2, h3, h4, h5, h6').forEach(el => { 
+         el.innerHTML = el.innerHTML.replace(
+          /(\s|^)(в|и|к|с|у|о|а|я|но|на|по|из|от|до|за|без|при|об)\s/gi,
+          '$1$2\u00A0'
+        );
+      });
+    }
+  })
+
   return (
-    <li className={"number-" + (id % 10)}>
+    <li ref={link} className={"number-" + (id % 10)}>
       <div className="w-full aspect-296/400 relative rounded-2xl overflow-hidden">
         <Image src={image} alt="name" fill/>
       </div>
