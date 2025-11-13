@@ -1,6 +1,7 @@
 'use server'
 
 import AccentButton from "@/components/button/accent-button";
+import CaseImage from "@/components/main/case";
 import Gallery from "@/components/main/gallery-image";
 import ScrollArrow from "@/components/main/scroll-arrow";
 import ServiceCard from "@/components/main/service-card";
@@ -257,9 +258,26 @@ export default async function Home() {
     <section id="garanty" className="wrapper py-[106px] flex flex-col items-center gap-8 max-lg:md:gap-10">
       <div className="flex flex-col gap-8 max-ld:gap-4">
         <h3 className={"text-white text-[38px] text-center max-lg:text-[32px] max-md:text-2xl font-medium" + strokeStyle}>Безусловная гарантия 12 месяцев — на работы и материалы</h3>
-        <p className={"text-[#DADADA] text-2xl max-lg:text-xl max-md:text-base max-w-[779px] max-ld:max-w-[643px] max-md:max-w-[301px] w-full text-center" + strokeStyle}>Монтаж, электрика и комплектующие — под нашей защитой. Все условия зафиксированы в договоре: сроки реакции, замена при браке и полная ответственность за результат.</p>
+        <p className={"text-[#DADADA] text-2xl max-lg:text-xl max-md:text-base max-w-[779px] max-lg:max-w-[643px] max-md:max-w-[301px] w-full text-center" + strokeStyle}>Монтаж, электрика и комплектующие — под нашей защитой. Все условия зафиксированы в договоре: сроки реакции, замена при браке и полная ответственность за результат.</p>
       </div>
       <AccentButton >Перейти к оформлению</AccentButton>
+    </section>
+    <section id="portfolio" className="wrapper flex flex-col gap-[90px] items-center">
+      <p className="text-center text-white text-xl max-lg:text-base leading-[140%] tracking-[-.02em] max-w-[927px] max-lg:max-w-[583px] max-md:max-w-none">Мы оформили уже огромное количество домов и знаем, как сделать красиво именно у Вас! Каждый наш проект — это уют, свет и немного волшебства, которое хочется повторять!</p>
+      <div className="flex flex-col w-full gap-4 max-lg:md:gap-2.5">
+        <div className="grid grid-cols-[816fr_400fr] max-sm:grid-cols-1 gap-4 max-lg:md:gap-2.5 aspect-1232/504">
+          <CaseImage id={1} aspect="816/504"/>
+          <CaseImage id={2} aspect="400/504"/>
+        </div>
+        <div className="grid grid-cols-[623fr_593fr] max-sm:grid-cols-1 gap-4 max-lg:md:gap-2.5 aspect-1232/452">
+          <CaseImage id={3} aspect="623/452"/>
+          <CaseImage id={4} aspect="593/452"/>
+        </div>
+        <div className="grid grid-cols-[600fr_616fr] max-sm:grid-cols-1 gap-4 max-lg:md:gap-2.5 aspect-1232/560">
+          <CaseImage id={5} aspect="600/560"/>
+          <CaseImage id={6} aspect="616/560"/>
+        </div>
+      </div>
     </section>
    </main>
   );
