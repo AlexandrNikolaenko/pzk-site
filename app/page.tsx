@@ -112,7 +112,7 @@ export default async function Home() {
         <span className="text-white text-[48px] max-md:text-[32px] leading-[115.1%] tracking-[-.02em] ">С&nbsp;2016 года </span>
         <p className="text-[#DADADA] text-[24px] max-md:text-base leading-[115.1%] tracking-[-.02em] ">Мы создаем новогоднее настроение семьям и&nbsp;их гостям!</p>
       </div>
-      <div className="flex flex-col gap-8 max-md:gap-10 w-full max-md:max-w-md max-md:border-2 border-l-white">
+      <div className="flex flex-col gap-8 max-md:gap-10 w-full max-md:max-w-md max-md:border-l-2 border-l-white">
         <div className="flex relative">
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" className="absolute md:hidden top-[54px] max-md:top-0 -left-2.5 z-0" xmlns="http://www.w3.org/2000/svg">
             <circle cx="10" cy="10" r="10" fill="#E3B54B"/>
