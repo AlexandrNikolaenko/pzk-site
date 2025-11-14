@@ -19,9 +19,6 @@ export const metadata: Metadata = {
     "HandheldFriendly": "true",
     "MobileOptimized": "width",
     "apple-mobile-web-app-capable": "yes",
-    "yandex-verification": "59f85037b76e7936",
-    "google-site-verification": "m7XY-fvBQUJamJhguy8HUj5iTmUZUi_GDFFedXYS--k",
-    "cmsmagazine": "fe5868333c2da1c9837c61acb1b2e2df",
 
   },
   openGraph: {
