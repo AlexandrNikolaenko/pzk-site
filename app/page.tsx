@@ -208,10 +208,10 @@ export default async function Home() {
             <Image className="hover:scale-[110%] focus:scale-[110%] active:scale-[110%]" src={'/quality-image-3.jpg'} fill alt="image"/>
           </div>
         </ul>
-        <div className="flex gap-[46px] max-lg:gap-[34px] items-center max-md:py-20 max-md:flex-col">
+        <div className="flex gap-[46px] max-lg:gap-[34px] items-center max-md:flex-col">
           <span className="text-nowrap text-[32px] max-lg:text-[18px] text-[#DADADA] leading-[115.1%] tracking-[-.02em]">100.000 руб</span>
           <div className="relative w-full bg-[#BFBFBF] h-px max-md:h-full max-md:w-px">
-            <svg className="absolute top-0 max-md:bottom-0 max-md:top-auto right-0 translate-y-[-50%] max-md:rotate-90 max-md:translate-x-[50%] max-md:translate-y-0" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg className="absolute top-0 max-md:-bottom-0.5 max-md:top-auto right-0 translate-y-[-50%] max-md:rotate-90 max-md:translate-x-[50%] max-md:translate-y-0" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M0.5 0.5L15.5 8.75806L0.5 16.5" stroke="#BFBFBF" strokeLinecap="round"/>
             </svg>
           </div>
