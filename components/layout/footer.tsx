@@ -25,11 +25,11 @@ export default function Footer() {
           <Link href={"/#service"}>Спектр услуг</Link>
           <Link href={"/#portfolio"}>Наши работы</Link>
           <Link href={"/#advantages"}>Наши преимущества</Link>
-          <Link href={"/#achives"}>Наши успехи</Link>
+          <Link href={"/#success"}>Наши успехи</Link>
           <Link href={"/#prices"}>Диапазон стоимости</Link>
           <Link href={"/#steps"}>Этапы работы</Link>
           <Link href={"/#feedback"}>Отзывы</Link>
-          <Link href={"/#callback"}>Оставить заявку</Link>
+          <Link href={"/#form"}>Оставить заявку</Link>
         </div>
       </div>
     </footer>

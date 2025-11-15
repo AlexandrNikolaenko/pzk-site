@@ -302,7 +302,7 @@ export default async function Home() {
           </div>
         </div>
       </section>
-      <section className="wrapper pt-[190px] max-lg:pt-28 max-md:pt-[95px] pb-[129px] max-lg:pb-[78px] max-md:pb-[114px] flex flex-col gap-[52px]">
+      <section id="prices" className="wrapper pt-[190px] max-lg:pt-28 max-md:pt-[95px] pb-[129px] max-lg:pb-[78px] max-md:pb-[114px] flex flex-col gap-[52px]">
         <div className="flex justify-between itmes-start">
           <div className="flex flex-col gap-4">
             <h3 className="text-white font-medium text-[36px] max-lg:text-[32px] max-md:text-[24px] leading-[115.1%] tracking-[-.02em]">
@@ -377,7 +377,7 @@ export default async function Home() {
           </div>
         </div>
       </section>
-      <section className="wrapper">
+      <section id="steps" className="wrapper">
         <div className="relative rounded-2xl bg-[#D9D9D9] pt-14 max-lg:pt-34px max-md:pt-20 pb-9 max-lg:pb-5 max-md:pb-9 px-[119px] max-lg:px-[70px] max-md:px-[30px] flex flex-col items-center gap-24 max-lg:gap-14">
           <Image
             className="absolute top-[-30px]"
