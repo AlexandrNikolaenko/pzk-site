@@ -184,7 +184,7 @@ export default async function Home() {
         </div>
       </section>
       <section
-        id="achivements"
+        id="success"
         className="wrapper flex flex-col items-center gap-[97px] max-lg:md:gap-[60px] pt-[140px] max-md:pt-[113px]"
       >
         <div className="flex flex-col gap-2 items-center">
