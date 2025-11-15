@@ -7,7 +7,7 @@ class HttpRequest {
     this.#api_host = "http://178.72.150.74/api";
   }
 
-  async get({ onError, onSuccess, query }: GetQuery & {query: string}) {
+  async get({ onError, onSuccess, query }: GetQuery & { query: string }) {
     try {
       const res = await fetch(this.#api_host.concat(query), {
         method: "GET",
@@ -25,7 +25,12 @@ class HttpRequest {
     }
   }
 
-  async post({ onError, onSuccess, body, query }: PostQuery & {query: string}) {
+  async post({
+    onError,
+    onSuccess,
+    body,
+    query,
+  }: PostQuery & { query: string }) {
     try {
       const res = await fetch(this.#api_host.concat(query), {
         method: "POST",
@@ -38,7 +43,7 @@ class HttpRequest {
         const data = await res.json();
         if (onSuccess) onSuccess(data);
         return data;
-      } else throw await res.json()
+      } else throw await res.json();
     } catch (e) {
       console.log(e);
       if (onError) onError(e);
@@ -46,7 +51,12 @@ class HttpRequest {
     }
   }
 
-  async put({ onError, onSuccess, body, query }: PostQuery & {query: string}) {
+  async put({
+    onError,
+    onSuccess,
+    body,
+    query,
+  }: PostQuery & { query: string }) {
     try {
       const res = await fetch(this.#api_host.concat(query), {
         method: "PUT",
@@ -67,7 +77,12 @@ class HttpRequest {
     }
   }
 
-  async patch({ onError, onSuccess, body, query }: PostQuery & {query: string}) {
+  async patch({
+    onError,
+    onSuccess,
+    body,
+    query,
+  }: PostQuery & { query: string }) {
     try {
       const res = await fetch(this.#api_host.concat(query), {
         method: "PATCH",
@@ -88,7 +103,7 @@ class HttpRequest {
     }
   }
 
-  async delete({ onError, onSuccess, query }: GetQuery & {query: string}) {
+  async delete({ onError, onSuccess, query }: GetQuery & { query: string }) {
     try {
       const res = await fetch(this.#api_host.concat(query), {
         method: "DELETE",
@@ -127,12 +142,12 @@ export default class Api {
     this.#httpRequest = new HttpRequest();
   }
 
-  async addLead({body, onSuccess, onError}: PostQuery) {
+  async addLead({ body, onSuccess, onError }: PostQuery) {
     return await this.#httpRequest.post({
-      query: '/createlead',
+      query: "/createlead",
       body,
       onSuccess,
-      onError
-    })
+      onError,
+    });
   }
 }

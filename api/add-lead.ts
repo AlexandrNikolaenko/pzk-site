@@ -1,9 +1,21 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import Api from "./api";
 
-export type ErrorLead = {success: boolean, message: string, fields: {name: boolean, phone: boolean}}
+export type ErrorLead = {
+  success: boolean;
+  message: string;
+  fields: { name: boolean; phone: boolean };
+};
 
-export default function addLead({body, onSuccess, onError}: {body: {name: string, phone: string}, onSuccess: () => void, onError: (error: ErrorLead) => void}) {
+export default function addLead({
+  body,
+  onSuccess,
+  onError,
+}: {
+  body: { name: string; phone: string };
+  onSuccess: () => void;
+  onError: (error: ErrorLead) => void;
+}) {
   const api = new Api();
 
   function handleSuccess(data: any) {
@@ -15,5 +27,5 @@ export default function addLead({body, onSuccess, onError}: {body: {name: string
     onError(error);
   }
 
-  api.addLead({body, onSuccess: handleSuccess, onError: handleError})
+  api.addLead({ body, onSuccess: handleSuccess, onError: handleError });
 }
