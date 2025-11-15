@@ -125,7 +125,7 @@ export default async function Home() {
               <p className="text-[#DADADA] font-light w-[320px] max-w-[320px] max-xl:max-w-[281px] text-xl leading-[115.1%] tracking-[-.02em] max-xl:text-base max-md:text-center">
                 Все используемое светодиодное оборудование влагозащищено <br />
                 и&nbsp;имеет соответствующие{" "}
-                <Link href={"/#"} className="underline">
+                <Link href={"/lenty_neon_2024-2029.pdf"} className="underline">
                   сертификаты
                 </Link>
                 .
