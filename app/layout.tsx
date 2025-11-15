@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     "HandheldFriendly": "true",
     "MobileOptimized": "width",
     "apple-mobile-web-app-capable": "yes",
-
+    "google-site-verification": "hL4FslsOrsFRPh0i51B5Qy4MYeG5N9z-p1NKR41eYvc"
   },
   openGraph: {
     url: "https://pzkgroup.ru/",
