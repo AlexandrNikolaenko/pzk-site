@@ -4,7 +4,7 @@ class HttpRequest {
   #api_host: string;
 
   constructor() {
-    this.#api_host = "http://178.72.150.74/api";
+    this.#api_host = "https://spb.pzkgroup.ru//api";
   }
 
   async get({ onError, onSuccess, query }: GetQuery & { query: string }) {
