@@ -175,7 +175,7 @@ export default async function Home() {
                 Профессионализм
               </span>
               <p className="text-[#DADADA] font-light w-[320px] max-w-[320px] max-xl:max-w-[323px] text-xl leading-[115.1%] tracking-[-.02em] max-xl:text-base max-md:text-center">
-                У&nbsp;вас будут работать квалифицированные электромонтажники
+                У&nbsp;Вас будут работать квалифицированные электромонтажники
                 с&nbsp;опытом электрофикации загородных домов без&nbsp;холодных
                 скруток и&nbsp;других некачественных соединений.
               </p>
