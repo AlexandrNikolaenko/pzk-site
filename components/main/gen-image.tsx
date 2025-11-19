@@ -27,6 +27,7 @@ export default function GenImageCard() {
   function handleClickButton() {
     if (form.current && isFile) {
       const formData = new FormData(form.current);
+      formData.append('imageId', btoa(Date.now().toString()));
 
       generator(formData);
       
