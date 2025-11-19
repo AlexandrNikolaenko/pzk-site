@@ -10,6 +10,7 @@ export default function GenImageCard() {
   const [error, setError] = useState<boolean>(false);
   const form = useRef<HTMLFormElement>(null);
   const input = useRef<HTMLInputElement>(null);
+  const id = useRef<HTMLInputElement>(null);
   const {data, generator} = useGenImage({onSuccess, onError});
 
   console.log(error);
@@ -29,7 +30,6 @@ export default function GenImageCard() {
     e.preventDefault();
     if (form.current && isFile) {
       const formData = new FormData(form.current);
-      formData.append('imageId', btoa(Date.now().toString()));
 
       generator(formData);
       
@@ -39,7 +39,12 @@ export default function GenImageCard() {
   }
 
   function handleChange() {
-    if (!isFile && input.current?.value) setIsFile(true);
+    if (!isFile && input.current?.value) {
+      setIsFile(true);
+      if (id.current) {
+        id.current.value = btoa(Date.now().toString());
+      }
+    }
   }
 
   function buttonMessage() {
@@ -55,6 +60,7 @@ export default function GenImageCard() {
   return (
     <div className="w-full max-w-[764px] max-lg:max-w-[601px] grid grid-cols-2 max-md:flex max-md:flex-col-reverse gap-[30px] max-lg:gap-6 max-md:gap-5 py-[42px] max-lg:py-[33px] max-md:py-[31px] px-10 max-lg:px-[31px] max-md:px-[35px] bg-[#D9D9D9] rounded-2xl max-lg:rounded-[14px] max-md:rounded-xl">
       <form ref={form} className="w-full relative flex justify-end flex-col gap-[148px] max-lg:gap-[117px] px-[22px] py-[21px] max-lg:p-[17px] max-md:p-0 items-center rounded-2xl max-lg:rounded-[14px] max-md:rounded-xl bg-[#B6B6B6] max-md:bg-transparent">
+        <input ref={id} name="imageId" id="imageId" className="hidden absolute" defaultValue={''}/>
         <input ref={input} onChange={handleChange} className="absolute w-full h-full z-0 opacity-0" type="file" id="file" name={'file'} accept="image/jpeg"/>
         <div className="flex flex-col gap-[13px] max-lg:gap-2.5 items-center max-md:hidden">
           <div className="relative aspect-square w-[35px] max-lg:w-[27px]">
