@@ -6,6 +6,7 @@ import useGenImage, { GenImage } from "@/api/gen-image";
 
 export default function GenImageCard() {
   const [isFile, setIsFile] = useState(false);
+  const [fileName, setFileName] = useState<string | undefined>();
   const [src, setSrc] = useState<string | null>(null);
   const [error, setError] = useState<boolean>(false);
   const form = useRef<HTMLFormElement>(null);
@@ -14,10 +15,11 @@ export default function GenImageCard() {
   const {data, generator} = useGenImage({onSuccess, onError});
 
   console.log(error);
+  console.log(src);
 
   function onSuccess(result: GenImage) {
     setError(false);
-    setSrc(result.image)
+    setSrc(result.image.toString());
   }
 
   function onError(error: object) {
@@ -38,12 +40,26 @@ export default function GenImageCard() {
     }
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  function handleDropFile(e: any) {
+    const files = e.dataTransfer.files;
+    if (input.current && files.length){
+      input.current.files = files;
+
+      handleChange();
+    }
+  }
+
   function handleChange() {
-    if (!isFile && input.current?.value) {
+    if (input.current?.value) {
       setIsFile(true);
+      setFileName(input.current?.files?.item(0)?.name)
       if (id.current) {
         id.current.value = btoa(Date.now().toString());
       }
+    } else {
+      setFileName(undefined);
+      setIsFile(false);
     }
   }
 
@@ -58,7 +74,7 @@ export default function GenImageCard() {
   }
 
   return (
-    <div className="w-full max-w-[764px] max-lg:max-w-[601px] grid grid-cols-2 max-md:flex max-md:flex-col-reverse gap-[30px] max-lg:gap-6 max-md:gap-5 py-[42px] max-lg:py-[33px] max-md:py-[31px] px-10 max-lg:px-[31px] max-md:px-[35px] bg-[#D9D9D9] rounded-2xl max-lg:rounded-[14px] max-md:rounded-xl">
+    <div onDrop={handleDropFile} className="w-full max-w-[764px] max-lg:max-w-[601px] grid grid-cols-2 max-md:flex max-md:flex-col-reverse gap-[30px] max-lg:gap-6 max-md:gap-5 py-[42px] max-lg:py-[33px] max-md:py-[31px] px-10 max-lg:px-[31px] max-md:px-[35px] bg-[#D9D9D9] rounded-2xl max-lg:rounded-[14px] max-md:rounded-xl">
       <form ref={form} className="w-full relative flex justify-end flex-col gap-[148px] max-lg:gap-[117px] px-[22px] py-[21px] max-lg:p-[17px] max-md:p-0 items-center rounded-2xl max-lg:rounded-[14px] max-md:rounded-xl bg-[#B6B6B6] max-md:bg-transparent">
         <input ref={id} name="imageId" id="imageId" className="hidden absolute" defaultValue={''}/>
         <input ref={input} onChange={handleChange} className="absolute w-full h-full z-0 opacity-0" type="file" id="file" name={'file'} accept="image/jpeg"/>
@@ -66,7 +82,7 @@ export default function GenImageCard() {
           <div className="relative aspect-square w-[35px] max-lg:w-[27px]">
             <Image alt="choose photo" src={'/choose-image-icon.svg'} fill/>
           </div>
-          <span className="text-xs leading-[115.1%] tracking-[-.02em] text-[#747474]">Перетащите или загрузите фото</span>
+          <span className="text-xs leading-[115.1%] tracking-[-.02em] text-[#747474]">{fileName ? fileName : 'Перетащите или загрузите фото'}</span>
         </div>
         <button disabled={data.isPending} onClick={handleClickButton} className="w-full py-3.5 relative text-[#D9D9D9] text-base leading-[115.1%] tracking-[-.02em] bg-background disabled:opacity-50 rounded-full">
           {
@@ -89,9 +105,11 @@ function ChangerPic({src}: {src: string | null}) {
   const items = Array.from({length: 4}, (_, i) => i + 1);
 
   if (src) {
-    <div className="w-full relative ">
-
-    </div>
+    return (
+      <div className="w-full aspect-344/420 max-md:aspect-310/333 relative overflow-hidden rounded-2xl max-lg:rounded-[14px] max-md:rounded-xl">
+        <Image src={src} alt="Your light house" fill objectFit="cover"/>
+      </div>
+    )
   }
 
   return (
