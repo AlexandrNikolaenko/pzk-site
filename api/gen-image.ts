@@ -5,18 +5,7 @@ import Api from "./api";
 import { useState } from "react";
 
 export type GenImage = {
-  code: number,
-  msg: string,
-  data: {
-    taskId: string,
-    response: {
-      originImageUrl: string,
-      resultImageUrl: string
-    },
-    successFlag: 0 | 1 | 2 | 3,
-    errorMessage: string,
-    createTime: string
-  }
+  image: string;
 }
 
 export type ErrorLead = {

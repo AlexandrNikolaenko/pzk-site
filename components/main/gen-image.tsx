@@ -16,7 +16,7 @@ export default function GenImageCard() {
 
   function onSuccess(result: GenImage) {
     setError(false);
-    setSrc(result.data.response.resultImageUrl)
+    setSrc(result.image)
   }
 
   function onError(error: object) {
