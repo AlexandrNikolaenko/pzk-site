@@ -51,6 +51,29 @@ class HttpRequest {
     }
   }
 
+  async postFile({
+    onError,
+    onSuccess,
+    body,
+    query,
+  }: PostQuery & { query: string, body: FormData }) {
+    try {
+      const res = await fetch(this.#api_host.concat(query), {
+        method: "POST",
+        body: body,
+      });
+      if (res.ok) {
+        const data = await res.json();
+        if (onSuccess) onSuccess(data);
+        return data;
+      } else throw await res.json();
+    } catch (e) {
+      console.log(e);
+      if (onError) onError(e);
+      return;
+    }
+  }
+
   async put({
     onError,
     onSuccess,
@@ -125,7 +148,7 @@ class HttpRequest {
 }
 
 interface PostQuery {
-  body: object;
+  body: object | FormData;
   onSuccess: (data: object) => void;
   onError: (error: any) => void;
 }
@@ -149,5 +172,14 @@ export default class Api {
       onSuccess,
       onError,
     });
+  }
+
+  async genImage({ body, onSuccess, onError }: PostQuery & {body: FormData}) {
+    return await this.#httpRequest.postFile({
+      query: "/generate",
+      body,
+      onSuccess,
+      onError,
+    })
   }
 }

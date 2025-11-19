@@ -5,6 +5,7 @@ import Form from "@/components/form/form";
 import CaseImage from "@/components/main/case";
 import FeedbackLent from "@/components/main/feedback-lent";
 import Gallery from "@/components/main/gallery-image";
+import GenImageCard from "@/components/main/gen-image";
 import PersonCard from "@/components/main/person-card";
 import ScrollFeedbackArrow from "@/components/main/scrooll-feedback-arrow";
 import ServiceCard from "@/components/main/service-card";
@@ -180,7 +181,29 @@ export default async function Home() {
                 скруток и&nbsp;других некачественных соединений.
               </p>
             </div>
+            <div className="relative h-16 w-[30px] md:hidden">
+              <Image src={"/arrow-persons.svg"} alt="next" fill />
+            </div>
           </div>
+        </div>
+      </section>
+      <section className="wrapper flex flex-col gap-30 max-lg:gap-20 max-md:gap-[90px] items-center pt-[122px] max-lg:pt-30 max-md:pt-[55px]">
+        <div className="flex flex-col items-center gap-14 max-md:gap-[43px]">
+          <div className="flex flex-col items-center gap-[11px] max-lg:gap-4 max-md:gap-[17px]">
+            <h3 className={"font-medium text-[#D9D9D9] text-[32px] max-lg:text-2xl max-md:text-xl text-center" + strokeStyle}>Посмотрите, как засияет ваш дом</h3>
+            <p className={"text-[#D9D9D9] text-xl max-lg:text-base text-center" + strokeStyle}>
+              Загрузите фото вашего дома&nbsp;—&nbsp;и&nbsp;через несколько секунд увидите, как&nbsp;он&nbsp;засияет после нашего оформления.
+            </p>
+          </div>
+          <GenImageCard />
+        </div>
+        <div className="flex flex-col items-center gap-10 max-md:gap-6">
+          <div className="flex flex-col items-center gap-4">
+            <h2 className={"font-medium text-white text-[40px] max-lg:text-2xl text-center" + strokeStyle}>Нравится, как выглядит?<br /> 
+  — Мы воплотим эту картинку в реальность </h2>
+            <p className={"text-[#DADADA] text-2xl max-lg:text-base text-center" + strokeStyle}>Менеджер свяжется с&nbsp;вами, согласует удобное время замера, посчитает стоимость под&nbsp;ваш&nbsp;проект. <br/>Бригада осуществит монтаж в&nbsp;кратчайшее сроки.</p>
+          </div>
+          <Link href={'/#form'}><AccentButton>Связаться с менеджером</AccentButton></Link>
         </div>
       </section>
       <section
