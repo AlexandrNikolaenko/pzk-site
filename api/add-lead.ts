@@ -12,7 +12,7 @@ export default function addLead({
   onSuccess,
   onError,
 }: {
-  body: { name: string; phone: string };
+  body: { name: string; phone: string, path: string };
   onSuccess: () => void;
   onError: (error: ErrorLead) => void;
 }) {

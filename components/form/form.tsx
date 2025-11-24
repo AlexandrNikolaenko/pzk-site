@@ -6,7 +6,7 @@ import addLead, { ErrorLead } from "@/api/add-lead";
 import { useForm, Controller } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const signupSchema = z.object({
   name: z.string(),
@@ -24,6 +24,14 @@ export default function Form() {
   const [buttonMessage, setButtonMessage] = useState<
     "Отправляем..." | "Отправлено" | "Отправить"
   >("Отправить");
+  const [path, setPath] = useState<string>('');
+
+  useEffect(() => {
+    if (path == '') {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      setPath(window.location.host);
+    }
+  }, [path])
 
   function handleSuccess() {
     setQueryState("SUCCESS");
@@ -44,7 +52,7 @@ export default function Form() {
   function onSubmit(values: { name: string; phone: string }) {
     setQueryState("PENDING");
     setButtonMessage("Отправляем...");
-    addLead({ body: values, onSuccess: handleSuccess, onError: handleError });
+    addLead({ body: {path, ...values}, onSuccess: handleSuccess, onError: handleError });
   }
 
   const {
