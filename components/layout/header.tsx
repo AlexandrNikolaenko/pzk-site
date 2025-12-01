@@ -4,7 +4,7 @@ import Link from "next/link";
 import Logo from "../core/logo";
 import ContactLink from "./contact-link";
 
-export default function Header() {
+export default async function Header() {
   return (
     <header className="absolute w-full pt-[54px] top-0 z-50">
       <div className="wrapper flex items-center justify-between">

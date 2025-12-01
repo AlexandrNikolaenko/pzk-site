@@ -7,6 +7,9 @@ import { useForm, Controller } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useEffect, useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { MouseEvent } from "react";
 
 const signupSchema = z.object({
   name: z.string(),
@@ -25,6 +28,13 @@ export default function Form() {
     "Отправляем..." | "Отправлено" | "Отправить"
   >("Отправить");
   const [path, setPath] = useState<string>('');
+  const [isCheckbox, setIsCheckbox] = useState(false);
+  const [errorCheck, setErrorCheck] = useState(false);
+
+  function handleAgree(e: MouseEvent<HTMLButtonElement>) {
+    e.preventDefault();
+    setIsCheckbox(!isCheckbox);
+  }
 
   useEffect(() => {
     if (path == '') {
@@ -50,9 +60,14 @@ export default function Form() {
   }
 
   function onSubmit(values: { name: string; phone: string }) {
-    setQueryState("PENDING");
-    setButtonMessage("Отправляем...");
-    addLead({ body: {path, ...values}, onSuccess: handleSuccess, onError: handleError });
+    if (isCheckbox) {
+      setErrorCheck(false);
+      setQueryState("PENDING");
+      setButtonMessage("Отправляем...");
+      addLead({ body: {path, ...values}, onSuccess: handleSuccess, onError: handleError });
+    } else {
+      setErrorCheck(true);
+    }
   }
 
   const {
@@ -106,6 +121,15 @@ export default function Form() {
             />
           )}
         />
+        <div className="flex items-start gap-2.5">
+          <button onClick={handleAgree} className="size-5 shrink-0 rounded-md border border-background text-color-2 outline-none transition-colors">
+            {
+              isCheckbox && <Image width={18} height={18} alt="" src={"/checkmark.svg"}/>
+            }
+          </button>
+          <input value={'off'} className="hidden" type="checkbox"/>
+          <label><span className={`${errorCheck && !isCheckbox ? 'text-red-500' : 'text-background'}`} style={{transition: '0s all'}}>Я подтверждаю, что прочитал <Link className="underline" href="/polzovatelskoe-soglashenie" style={{transition: '0s all'}}>Пользовательское соглашение</Link>,<br className="hidden sm:inline"/> и даю согласие на обработку персональных данных.</span></label>
+        </div>
       </div>
       {formError.message == "" ? (
         <></>
