@@ -128,7 +128,7 @@ export default function Form() {
             }
           </button>
           <input value={'off'} className="hidden" type="checkbox"/>
-          <label><span className={`${errorCheck && !isCheckbox ? 'text-red-500' : 'text-background'}`} style={{transition: '0s all'}}>Я подтверждаю, что прочитал <Link className="underline" href="/polzovatelskoe-soglashenie" style={{transition: '0s all'}}>Пользовательское соглашение</Link>,<br className="hidden sm:inline"/> и даю согласие на обработку персональных данных.</span></label>
+          <label><span className={`text-xl max-md:text-xs ${errorCheck && !isCheckbox ? 'text-red-500' : 'text-background'}`} style={{transition: '0s all'}}>Я подтверждаю, что прочитал <Link className="underline" href="/polzovatelskoe-soglashenie" style={{transition: '0s all'}}>Пользовательское соглашение</Link>,<br className="hidden sm:inline"/> и даю согласие на обработку персональных данных.</span></label>
         </div>
       </div>
       {formError.message == "" ? (
