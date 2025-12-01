@@ -1,6 +1,8 @@
+'use server'
+
 import Link from "next/link";
 import Logo from "../core/logo";
-import Image from "next/image";
+import ContactLink from "./contact-link";
 
 export default function Header() {
   return (
@@ -22,19 +24,7 @@ export default function Header() {
           contact="8 (812) 409-30-99"
           href="tel:+78124093099"
         />
-        <Link
-          href={
-            "https://t.me/m/eIAw9FIUZmZi"
-          }
-          className="flex items-center gap-[11px]"
-        >
-          <div className="relative w-[31px] max-[1100px]:w-[25px] max-[550px]:w-5 aspect-square">
-            <Image src={"/telegram-icon.svg"} alt="whatsapp" fill />
-          </div>
-          <span className="max-w-[149px] max-[1100px]:max-w-[115px] max-[550px]:max-w-[93px] text-[#BFBFBF] text-base max-[1100px]:text-xs max-[550px]:text-[10px] font-bold">
-            Получить каталог в Telegram
-          </span>
-        </Link>
+        <ContactLink />
       </div>
     </header>
   );
