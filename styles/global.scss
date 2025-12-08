@@ -125,6 +125,23 @@ footer {
   display: none;
 }
 
+.img-top {
+  opacity: 1;
+  animation-name: fade-scroll;
+  animation-timeline: view();
+  animation-duration: 1s; /* формальность — длительность создаётся скроллом */
+  animation-range: entry 0% exit 100%;
+}
+
+@keyframes fade-scroll {
+  20% {
+    opacity: 1; /* когда элемент входит в экран */
+  }
+  40% {
+    opacity: 0; /* когда почти вышел */
+  }
+}
+
 #team ul li {
   &.number-1 {
     grid-column-start: 1;

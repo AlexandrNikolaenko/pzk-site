@@ -12,7 +12,6 @@ export default async function Header() {
         <ContactBlock
           title="режим работы"
           contact="пн-пт: 10:00-19:00"
-          href="/#"
         />
         <ContactBlock
           title="пишите"
@@ -37,7 +36,7 @@ function ContactBlock({
 }: {
   title: string;
   contact: string;
-  href: string;
+  href?: string;
 }) {
   return (
     <div
@@ -47,12 +46,20 @@ function ContactBlock({
         {title}
       </span>
       <div className="w-full h-px min-h-px bg-[#BFBFBF]"></div>
-      <Link
-        href={href}
-        className="text-[#BFBFBF] text-base max-[1100px]:text-xs max-[550px]:text-[10px] font-semibold"
-      >
-        {contact}
-      </Link>
+      {
+        href ?
+        <Link
+          href={href}
+          className="text-[#BFBFBF] text-base max-[1100px]:text-xs max-[550px]:text-[10px] font-semibold"
+        >
+          {contact}
+        </Link> :
+        <span
+          className="text-[#BFBFBF] text-base max-[1100px]:text-xs max-[550px]:text-[10px] font-semibold"
+        >
+          {contact}
+        </span>
+      }
     </div>
   );
 }

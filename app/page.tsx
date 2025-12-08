@@ -105,7 +105,7 @@ export default async function Home() {
               objectFit="cover"
             />
             <Image
-              className="hover:opacity-0 active:opacity-0 focus:opacity-0"
+              className="img-top"
               src={"/advantages-fon-dark.jpg"}
               alt="fon"
               fill
@@ -556,7 +556,7 @@ export default async function Home() {
           <span className={"text-[#DADADA] text-2xl text-center" + strokeStyle}>
             Ищите нас на&nbsp;ЯндексКартах!
           </span>
-          <Link href={"https://yandex.ru/maps/-/CLC2VI~0"}>
+          <Link target="_blank" href={"https://yandex.ru/maps/-/CLC2VI~0"}>
             <AccentButton>Искать</AccentButton>
           </Link>
         </div>
