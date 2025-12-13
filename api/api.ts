@@ -32,13 +32,21 @@ class HttpRequest {
     query,
   }: PostQuery & { query: string }) {
     try {
+      const controller = new AbortController();
+      const signal = controller.signal;
+
+      const timeoutId = setTimeout(() => {
+        controller.abort(); // Прерываем запрос при таймауте
+      }, 2 * 60 * 1000);
       const res = await fetch(this.#api_host.concat(query), {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(body),
+        signal
       });
+      clearTimeout(timeoutId);
       if (res.ok) {
         const data = await res.json();
         if (onSuccess) onSuccess(data);
