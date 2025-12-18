@@ -75,11 +75,11 @@ export default function GenImageCard() {
 
   return (
     <div onDrop={handleDropFile} className="w-full max-w-[764px] max-lg:max-w-[601px] grid grid-cols-2 max-md:flex max-md:flex-col-reverse gap-[30px] max-lg:gap-6 max-md:gap-5 py-[42px] max-lg:py-[33px] max-md:py-[31px] px-10 max-lg:px-[31px] max-md:px-[35px] bg-[#D9D9D9] rounded-2xl max-lg:rounded-[14px] max-md:rounded-xl">
-      <form ref={form} className="w-full relative flex justify-end flex-col gap-[148px] max-lg:gap-[117px] px-[22px] py-[21px] max-lg:p-[17px] max-md:p-0 items-center rounded-2xl max-lg:rounded-[14px] max-md:rounded-xl bg-[#B6B6B6] max-md:bg-transparent">
+      <form ref={form} className="w-full relative flex justify-end flex-col gap-[148px] max-lg:gap-[117px] max-md:gap-5 px-[22px] py-[21px] max-lg:p-[17px] max-md:p-0 items-center rounded-2xl max-lg:rounded-[14px] max-md:rounded-xl bg-[#B6B6B6] max-md:bg-transparent">
         <input ref={id} name="imageId" id="imageId" className="hidden absolute" defaultValue={''}/>
         <input ref={input} onChange={handleChange} className="absolute w-full h-full z-0 opacity-0" type="file" id="file" name={'file'} accept="image/jpeg"/>
-        <div className="flex flex-col gap-[13px] max-lg:gap-2.5 items-center max-md:hidden">
-          <div className="relative aspect-square w-[35px] max-lg:w-[27px]">
+        <div className="flex flex-col gap-[13px] max-lg:gap-2.5 items-center">
+          <div className="relative aspect-square w-[35px] max-lg:w-[27px] max-md:hidden">
             <Image alt="choose photo" src={'/choose-image-icon.svg'} fill/>
           </div>
           <span className="text-xs leading-[115.1%] tracking-[-.02em] text-[#747474]">{fileName ? fileName : 'Перетащите или загрузите фото'}</span>
