@@ -65,7 +65,14 @@ export default function GenImageCard() {
 
   function buttonMessage() {
     if (data.isPending) {
-      return 'Генерация...'
+      return (
+        <span className="flex items-center justify-center gap-1">
+          Генерация
+          <span className="animate-bounce [animation-delay:0ms]">.</span>
+          <span className="animate-bounce [animation-delay:150ms]">.</span>
+          <span className="animate-bounce [animation-delay:300ms]">.</span>
+        </span>
+      )
     } else if (isFile) {
       return 'Отправить'
     } else {
